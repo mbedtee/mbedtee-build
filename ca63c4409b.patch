@@ -80989,20 +80989,6 @@ diff -uprN '--exclude=.*' '--exclude=dl' buildroot-ori/linux/patches/mbedtee-lin
 + /*
 +  * OP-TEE specific capabilities
 +  */
-diff -uprN '--exclude=.*' '--exclude=dl' buildroot-ori/local.mk buildroot/local.mk
---- buildroot-ori/local.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/local.mk	2021-10-01 00:22:47.837000600 +0800
-@@ -0,0 +1,10 @@
-+MBEDTEE_LINUX_DTS_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-linux-dts
-+MBEDTEE_COMMON_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-common
-+MBEDTEE_SUPP_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-supp
-+MBEDTEE_CRYPTO_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-crypto
-+MBEDTEE_CLIENT_API_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-client-api
-+MBEDTEE_HELLOWORLD_CLIENT_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-helloworld-client
-+MBEDTEE_HELLOWORLD_TA_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-helloworld-ta
-+MBEDTEE_GLOBALPLATFORM_CLIENT_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-globalplatform-client
-+MBEDTEE_GLOBALPLATFORM_TA_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-globalplatform-ta
-+MBEDTEE_OS_OVERRIDE_SRCDIR = ~/work/GitHub/mbedtee-os
 diff -uprN '--exclude=.*' '--exclude=dl' buildroot-ori/Makefile buildroot/Makefile
 --- buildroot-ori/Makefile	2024-12-30 21:34:37.935966858 +0800
 +++ buildroot/Makefile	2024-12-30 20:38:03.306880663 +0800
