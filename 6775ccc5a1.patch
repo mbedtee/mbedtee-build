@@ -1,7 +1,7 @@
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Config.in buildroot/Config.in
---- buildroot-ori/Config.in	2025-01-02 09:20:32.684128215 +0800
-+++ buildroot/Config.in	2024-12-30 20:38:03.306880663 +0800
-@@ -988,6 +988,8 @@ source "system/Config.in"
+--- buildroot-ori/Config.in	2025-01-16 14:15:43.122471780 +0800
++++ buildroot/Config.in	2025-01-16 14:10:43.454457491 +0800
+@@ -995,6 +995,8 @@ source "system/Config.in"
  
  source "linux/Config.in"
  
@@ -12,7 +12,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Conf
  source "fs/Config.in"
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_malta_mips32r2_defconfig buildroot/configs/mbedtee_qemu_malta_mips32r2_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_malta_mips32r2_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_malta_mips32r2_defconfig	2025-01-02 07:22:33.063948453 +0800
++++ buildroot/configs/mbedtee_qemu_malta_mips32r2_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,33 @@
 +BR2_mipsel=y
 +BR2_mips_32r2=y
@@ -49,7 +49,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_sifive_u_riscv32_defconfig buildroot/configs/mbedtee_qemu_sifive_u_riscv32_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_sifive_u_riscv32_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_sifive_u_riscv32_defconfig	2025-01-02 07:30:20.757241363 +0800
++++ buildroot/configs/mbedtee_qemu_sifive_u_riscv32_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,32 @@
 +BR2_riscv=y
 +BR2_RISCV_32=y
@@ -85,7 +85,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_sifive_u_riscv64_defconfig buildroot/configs/mbedtee_qemu_sifive_u_riscv64_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_sifive_u_riscv64_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_sifive_u_riscv64_defconfig	2025-01-02 07:30:57.455690954 +0800
++++ buildroot/configs/mbedtee_qemu_sifive_u_riscv64_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,32 @@
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
@@ -121,7 +121,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_aarch64_defconfig buildroot/configs/mbedtee_qemu_virt_aarch64_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_aarch64_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_aarch64_defconfig	2025-01-02 07:31:41.180645360 +0800
++++ buildroot/configs/mbedtee_qemu_virt_aarch64_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,41 @@
 +BR2_aarch64=y
 +BR2_cortex_a75=y
@@ -166,7 +166,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_arm_defconfig buildroot/configs/mbedtee_qemu_virt_arm_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_arm_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_arm_defconfig	2025-01-02 06:58:04.918911174 +0800
++++ buildroot/configs/mbedtee_qemu_virt_arm_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,44 @@
 +BR2_arm=y
 +BR2_cortex_a15=y
@@ -214,7 +214,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_riscv32_defconfig buildroot/configs/mbedtee_qemu_virt_riscv32_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_riscv32_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_riscv32_defconfig	2025-01-02 07:31:51.905596850 +0800
++++ buildroot/configs/mbedtee_qemu_virt_riscv32_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,32 @@
 +BR2_riscv=y
 +BR2_RISCV_32=y
@@ -250,7 +250,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_riscv32_linux_defconfig buildroot/configs/mbedtee_qemu_virt_riscv32_linux_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_riscv32_linux_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_riscv32_linux_defconfig	2025-01-02 07:33:13.292964709 +0800
++++ buildroot/configs/mbedtee_qemu_virt_riscv32_linux_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,46 @@
 +BR2_riscv=y
 +BR2_RISCV_32=y
@@ -300,7 +300,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_riscv64_defconfig buildroot/configs/mbedtee_qemu_virt_riscv64_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_riscv64_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_riscv64_defconfig	2025-01-02 07:34:17.747966346 +0800
++++ buildroot/configs/mbedtee_qemu_virt_riscv64_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,32 @@
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
@@ -336,7 +336,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_riscv64_linux_defconfig buildroot/configs/mbedtee_qemu_virt_riscv64_linux_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_riscv64_linux_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_riscv64_linux_defconfig	2025-01-02 07:34:59.356967402 +0800
++++ buildroot/configs/mbedtee_qemu_virt_riscv64_linux_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,45 @@
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
@@ -385,7 +385,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_salix_soc_mips74k_defconfig buildroot/configs/mbedtee_salix_soc_mips74k_defconfig
 --- buildroot-ori/configs/mbedtee_salix_soc_mips74k_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_salix_soc_mips74k_defconfig	2025-01-02 07:29:55.408273949 +0800
++++ buildroot/configs/mbedtee_salix_soc_mips74k_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,33 @@
 +BR2_mipsel=y
 +BR2_mips_32r2=y
@@ -422,7 +422,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca15_defconfig buildroot/configs/mbedtee_vexpress_ca15_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca15_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca15_defconfig	2025-01-02 07:35:30.141516989 +0800
++++ buildroot/configs/mbedtee_vexpress_ca15_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,44 @@
 +BR2_arm=y
 +BR2_cortex_a15=y
@@ -470,7 +470,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca17x4_ca7x4_defconfig buildroot/configs/mbedtee_vexpress_ca17x4_ca7x4_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca17x4_ca7x4_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca17x4_ca7x4_defconfig	2025-01-02 07:36:30.974969729 +0800
++++ buildroot/configs/mbedtee_vexpress_ca17x4_ca7x4_defconfig	2025-01-16 14:08:58.336452478 +0800
 @@ -0,0 +1,44 @@
 +BR2_arm=y
 +BR2_cortex_a17_a7=y
@@ -518,7 +518,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca510x4_ca710x4_defconfig buildroot/configs/mbedtee_vexpress_ca510x4_ca710x4_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca510x4_ca710x4_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca510x4_ca710x4_defconfig	2025-01-02 07:37:00.416955985 +0800
++++ buildroot/configs/mbedtee_vexpress_ca510x4_ca710x4_defconfig	2025-01-16 14:08:58.340452479 +0800
 @@ -0,0 +1,41 @@
 +BR2_aarch64=y
 +BR2_cortex_a75_a55=y
@@ -563,7 +563,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca53_defconfig buildroot/configs/mbedtee_vexpress_ca53_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca53_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca53_defconfig	2025-01-02 07:37:11.075208979 +0800
++++ buildroot/configs/mbedtee_vexpress_ca53_defconfig	2025-01-16 14:08:58.340452479 +0800
 @@ -0,0 +1,40 @@
 +BR2_aarch64=y
 +BR2_TOOLCHAIN_EXTERNAL=y
@@ -607,7 +607,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca5_defconfig buildroot/configs/mbedtee_vexpress_ca5_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca5_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca5_defconfig	2025-01-02 07:36:49.474858938 +0800
++++ buildroot/configs/mbedtee_vexpress_ca5_defconfig	2025-01-16 14:08:58.340452479 +0800
 @@ -0,0 +1,46 @@
 +BR2_arm=y
 +BR2_cortex_a5=y
@@ -657,7 +657,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca65_defconfig buildroot/configs/mbedtee_vexpress_ca65_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca65_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca65_defconfig	2025-01-02 07:37:19.508529729 +0800
++++ buildroot/configs/mbedtee_vexpress_ca65_defconfig	2025-01-16 14:08:58.340452479 +0800
 @@ -0,0 +1,41 @@
 +BR2_aarch64=y
 +BR2_cortex_a75=y
@@ -702,7 +702,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca73x4_ca53x4_defconfig buildroot/configs/mbedtee_vexpress_ca73x4_ca53x4_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca73x4_ca53x4_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca73x4_ca53x4_defconfig	2025-01-02 07:37:33.871328078 +0800
++++ buildroot/configs/mbedtee_vexpress_ca73x4_ca53x4_defconfig	2025-01-16 14:08:58.341452479 +0800
 @@ -0,0 +1,41 @@
 +BR2_aarch64=y
 +BR2_cortex_a73_a53=y
@@ -747,7 +747,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_vexpress_ca78_defconfig buildroot/configs/mbedtee_vexpress_ca78_defconfig
 --- buildroot-ori/configs/mbedtee_vexpress_ca78_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_vexpress_ca78_defconfig	2025-01-02 07:37:44.533276481 +0800
++++ buildroot/configs/mbedtee_vexpress_ca78_defconfig	2025-01-16 14:08:58.341452479 +0800
 @@ -0,0 +1,41 @@
 +BR2_aarch64=y
 +BR2_cortex_a75=y
@@ -791,8 +791,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MKPASSWD=y
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/linux.mk buildroot/linux/linux.mk
---- buildroot-ori/linux/linux.mk	2025-01-02 09:20:32.793128218 +0800
-+++ buildroot/linux/linux.mk	2024-12-30 20:38:03.307880663 +0800
+--- buildroot-ori/linux/linux.mk	2025-01-16 14:15:43.232471785 +0800
++++ buildroot/linux/linux.mk	2025-01-16 14:10:43.456457491 +0800
 @@ -123,6 +123,8 @@ ifeq ($(BR2_LINUX_KERNEL_NEEDS_HOST_OPEN
  LINUX_DEPENDENCIES += host-openssl
  endif
@@ -804,7 +804,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
  endif
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/patches/mbedtee-linux-5.15.175.patch-- buildroot/linux/patches/mbedtee-linux-5.15.175.patch--
 --- buildroot-ori/linux/patches/mbedtee-linux-5.15.175.patch--	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/linux/patches/mbedtee-linux-5.15.175.patch--	2024-12-30 16:33:07.384893094 +0800
++++ buildroot/linux/patches/mbedtee-linux-5.15.175.patch--	2025-01-16 14:08:58.344452479 +0800
 @@ -0,0 +1,2189 @@
 +diff -uprN '--exclude=.*' '--exclude=GNU*' linux-5.15.175-ori/arch/arm/boot/compressed/head.S linux-5.15.175/arch/arm/boot/compressed/head.S
 +--- linux-5.15.175-ori/arch/arm/boot/compressed/head.S	2024-12-20 01:07:23.000000000 +0800
@@ -2997,7 +2997,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/patches/mbedtee-linux-6.1.122.patch-- buildroot/linux/patches/mbedtee-linux-6.1.122.patch--
 --- buildroot-ori/linux/patches/mbedtee-linux-6.1.122.patch--	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/linux/patches/mbedtee-linux-6.1.122.patch--	2024-12-30 16:31:59.801526263 +0800
++++ buildroot/linux/patches/mbedtee-linux-6.1.122.patch--	2025-01-16 14:08:58.346452479 +0800
 @@ -0,0 +1,2147 @@
 +diff -uprN '--exclude=.*' '--exclude=GNU*' linux-6.1.122-ori/arch/arm/boot/compressed/head.S linux-6.1.122/arch/arm/boot/compressed/head.S
 +--- linux-6.1.122-ori/arch/arm/boot/compressed/head.S	2024-12-27 20:53:02.000000000 +0800
@@ -5148,7 +5148,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/patches/mbedtee-linux-6.12.7.patch-- buildroot/linux/patches/mbedtee-linux-6.12.7.patch--
 --- buildroot-ori/linux/patches/mbedtee-linux-6.12.7.patch--	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/linux/patches/mbedtee-linux-6.12.7.patch--	2024-12-30 16:50:11.445895557 +0800
++++ buildroot/linux/patches/mbedtee-linux-6.12.7.patch--	2025-01-16 14:08:58.347452479 +0800
 @@ -0,0 +1,2151 @@
 +diff -uprN '--exclude=.*' '--exclude=GNU*' linux-6.12.7-ori/arch/arm/boot/compressed/head.S linux-6.12.7/arch/arm/boot/compressed/head.S
 +--- linux-6.12.7-ori/arch/arm/boot/compressed/head.S	2024-12-27 21:02:20.000000000 +0800
@@ -7303,7 +7303,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/patches/mbedtee-linux-6.13-rc5.patch-- buildroot/linux/patches/mbedtee-linux-6.13-rc5.patch--
 --- buildroot-ori/linux/patches/mbedtee-linux-6.13-rc5.patch--	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/linux/patches/mbedtee-linux-6.13-rc5.patch--	2024-12-30 18:18:34.830668175 +0800
++++ buildroot/linux/patches/mbedtee-linux-6.13-rc5.patch--	2025-01-16 14:08:58.348452479 +0800
 @@ -0,0 +1,2151 @@
 +diff -uprN '--exclude=.*' '--exclude=GNU*' linux-6.13-rc5-ori/arch/arm/boot/compressed/head.S linux-6.13-rc5/arch/arm/boot/compressed/head.S
 +--- linux-6.13-rc5-ori/arch/arm/boot/compressed/head.S	2024-12-30 05:15:45.000000000 +0800
@@ -9458,7 +9458,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/patches/mbedtee-linux-6.6.68.patch buildroot/linux/patches/mbedtee-linux-6.6.68.patch
 --- buildroot-ori/linux/patches/mbedtee-linux-6.6.68.patch	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/linux/patches/mbedtee-linux-6.6.68.patch	2024-12-30 16:59:43.526548039 +0800
++++ buildroot/linux/patches/mbedtee-linux-6.6.68.patch	2025-01-16 14:08:58.349452479 +0800
 @@ -0,0 +1,2149 @@
 +diff -uprN '--exclude=.*' '--exclude=GNU*' linux-6.6.68-ori/arch/arm/boot/compressed/head.S linux-6.6.68/arch/arm/boot/compressed/head.S
 +--- linux-6.6.68-ori/arch/arm/boot/compressed/head.S	2024-12-27 20:58:58.000000000 +0800
@@ -11611,7 +11611,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/patches/mbedtee-linux-6.9.10.patch-- buildroot/linux/patches/mbedtee-linux-6.9.10.patch--
 --- buildroot-ori/linux/patches/mbedtee-linux-6.9.10.patch--	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/linux/patches/mbedtee-linux-6.9.10.patch--	2024-12-30 16:50:25.512896883 +0800
++++ buildroot/linux/patches/mbedtee-linux-6.9.10.patch--	2025-01-16 14:08:58.351452479 +0800
 @@ -0,0 +1,2149 @@
 +diff -uprN '--exclude=.*' '--exclude=GNU*' linux-6.9.10-ori/arch/arm/boot/compressed/head.S linux-6.9.10/arch/arm/boot/compressed/head.S
 +--- linux-6.9.10-ori/arch/arm/boot/compressed/head.S	2024-07-18 19:22:56.000000000 +0800
@@ -13763,8 +13763,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  * OP-TEE specific capabilities
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Makefile buildroot/Makefile
---- buildroot-ori/Makefile	2025-01-02 09:20:32.685128215 +0800
-+++ buildroot/Makefile	2024-12-30 20:38:03.306880663 +0800
+--- buildroot-ori/Makefile	2025-01-16 14:15:43.123471780 +0800
++++ buildroot/Makefile	2025-01-16 14:10:43.456457491 +0800
 @@ -535,6 +535,7 @@ include $(sort $(wildcard package/*/*.mk
  
  include boot/common.mk
@@ -13774,8 +13774,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Make
  
  # If using a br2-external tree, the BR2_EXTERNAL_$(NAME)_PATH variables
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/busybox/inittab buildroot/package/busybox/inittab
---- buildroot-ori/package/busybox/inittab	2025-01-02 09:20:32.823128219 +0800
-+++ buildroot/package/busybox/inittab	2024-12-30 20:38:03.307880663 +0800
+--- buildroot-ori/package/busybox/inittab	2025-01-16 14:15:43.264471787 +0800
++++ buildroot/package/busybox/inittab	2025-01-16 14:10:43.457457491 +0800
 @@ -29,7 +29,7 @@ null::sysinit:/bin/ln -sf /proc/self/fd/
  ::sysinit:/etc/init.d/rcS
  
@@ -13785,14 +13785,36 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/pack
  
  # Stuff to do for the 3-finger salute
  #::ctrlaltdel:/sbin/reboot
+diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/pkg-autotools.mk buildroot/package/pkg-autotools.mk
+--- buildroot-ori/package/pkg-autotools.mk	2025-01-16 14:15:43.584471802 +0800
++++ buildroot/package/pkg-autotools.mk	2025-01-16 14:10:43.457457491 +0800
+@@ -198,6 +198,7 @@ else
+ # because it often relies on host tools which may or may not be
+ # installed.
+ define $(2)_CONFIGURE_CMDS
++	@cd $$($$(PKG)_SRCDIR) && find . -exec touch -c -t 202010010000 --time=mtime '{}' +
+ 	(cd $$($$(PKG)_SRCDIR) && rm -rf config.cache; \
+ 	$$(HOST_CONFIGURE_OPTS) \
+ 	CFLAGS="$$(HOST_CFLAGS)" \
+diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/pkg-generic.mk buildroot/package/pkg-generic.mk
+--- buildroot-ori/package/pkg-generic.mk	2025-01-16 14:15:43.584471802 +0800
++++ buildroot/package/pkg-generic.mk	2025-01-16 14:10:43.457457491 +0800
+@@ -215,6 +215,7 @@ $(BUILD_DIR)/%/.stamp_extracted:
+ 	$(Q)chmod -R +rw $(@D)
+ 	$(foreach hook,$($(PKG)_POST_EXTRACT_HOOKS),$(call $(hook))$(sep))
+ 	@$(call step_end,extract)
++	@find $(@D) -exec touch -c -t 202010010000 --time=mtime '{}' +
+ 	$(Q)touch $@
+ 
+ # Rsync the source directory if the <pkg>_OVERRIDE_SRCDIR feature is
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/common.mk buildroot/tee/common.mk
 --- buildroot-ori/tee/common.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/common.mk	2021-10-01 19:17:37.882729569 +0800
++++ buildroot/tee/common.mk	2025-01-16 14:08:58.354452479 +0800
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/Config.in buildroot/tee/Config.in
 --- buildroot-ori/tee/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/Config.in	2021-10-01 19:17:37.883729569 +0800
++++ buildroot/tee/Config.in	2025-01-16 14:08:58.354452479 +0800
 @@ -0,0 +1,8 @@
 +menu "TEE"
 +
@@ -13804,7 +13826,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/armv7a_ca5_linux_config buildroot/tee/linux/armv7a_ca5_linux_config
 --- buildroot-ori/tee/linux/armv7a_ca5_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/armv7a_ca5_linux_config	2021-10-01 19:17:37.883729569 +0800
++++ buildroot/tee/linux/armv7a_ca5_linux_config	2025-01-16 14:08:58.355452479 +0800
 @@ -0,0 +1,1945 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -15753,7 +15775,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Kernel hacking
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/armv7a_linux_config buildroot/tee/linux/armv7a_linux_config
 --- buildroot-ori/tee/linux/armv7a_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/armv7a_linux_config	2021-10-01 19:17:37.884729569 +0800
++++ buildroot/tee/linux/armv7a_linux_config	2025-01-16 14:08:58.356452479 +0800
 @@ -0,0 +1,1947 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -17704,7 +17726,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Kernel hacking
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/armv7a_qemu_virt_linux_config buildroot/tee/linux/armv7a_qemu_virt_linux_config
 --- buildroot-ori/tee/linux/armv7a_qemu_virt_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/armv7a_qemu_virt_linux_config	2021-10-01 19:17:37.884729569 +0800
++++ buildroot/tee/linux/armv7a_qemu_virt_linux_config	2025-01-16 14:08:58.357452479 +0800
 @@ -0,0 +1,1947 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -19655,7 +19677,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Kernel hacking
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/armv8a_linux_config buildroot/tee/linux/armv8a_linux_config
 --- buildroot-ori/tee/linux/armv8a_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/armv8a_linux_config	2021-10-01 19:17:37.885729569 +0800
++++ buildroot/tee/linux/armv8a_linux_config	2025-01-16 14:08:58.358452480 +0800
 @@ -0,0 +1,1954 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -21613,7 +21635,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Kernel hacking
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/armv8a_qemu_virt_linux_config buildroot/tee/linux/armv8a_qemu_virt_linux_config
 --- buildroot-ori/tee/linux/armv8a_qemu_virt_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/armv8a_qemu_virt_linux_config	2021-10-01 19:17:37.886729569 +0800
++++ buildroot/tee/linux/armv8a_qemu_virt_linux_config	2025-01-16 14:08:58.359452480 +0800
 @@ -0,0 +1,1954 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -23571,17 +23593,17 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Kernel hacking
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/common.mk buildroot/tee/linux/common.mk
 --- buildroot-ori/tee/linux/common.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/common.mk	2021-10-01 19:17:37.886729569 +0800
++++ buildroot/tee/linux/common.mk	2025-01-16 14:08:58.360452480 +0800
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/linux/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/Config.in buildroot/tee/linux/Config.in
 --- buildroot-ori/tee/linux/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/Config.in	2021-10-01 19:17:37.886729569 +0800
++++ buildroot/tee/linux/Config.in	2025-01-16 14:08:58.360452480 +0800
 @@ -0,0 +1 @@
 +source "tee/linux/mbedtee-linux-dts/Config.in"
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/mbedtee-linux-dts/Config.in buildroot/tee/linux/mbedtee-linux-dts/Config.in
 --- buildroot-ori/tee/linux/mbedtee-linux-dts/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/mbedtee-linux-dts/Config.in	2021-10-01 19:17:37.886729569 +0800
++++ buildroot/tee/linux/mbedtee-linux-dts/Config.in	2025-01-16 14:08:58.360452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_LINUX_DTS
 +	bool "DTS for REE Linux which runs alongside MbedTEE"
@@ -23590,7 +23612,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +	  DTS for REE Linux which runs alongside MbedTEE
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/mbedtee-linux-dts/mbedtee-linux-dts.mk buildroot/tee/linux/mbedtee-linux-dts/mbedtee-linux-dts.mk
 --- buildroot-ori/tee/linux/mbedtee-linux-dts/mbedtee-linux-dts.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/mbedtee-linux-dts/mbedtee-linux-dts.mk	2021-10-01 19:17:37.886729569 +0800
++++ buildroot/tee/linux/mbedtee-linux-dts/mbedtee-linux-dts.mk	2025-01-16 14:08:58.360452480 +0800
 @@ -0,0 +1,30 @@
 +################################################################################
 +#
@@ -23624,7 +23646,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/riscv32_qemu_virt_linux_config buildroot/tee/linux/riscv32_qemu_virt_linux_config
 --- buildroot-ori/tee/linux/riscv32_qemu_virt_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/riscv32_qemu_virt_linux_config	2021-10-01 19:17:37.888729569 +0800
++++ buildroot/tee/linux/riscv32_qemu_virt_linux_config	2025-01-16 14:08:58.362452480 +0800
 @@ -0,0 +1,4024 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -27652,7 +27674,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Documentation
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/riscv64_qemu_virt_linux_config buildroot/tee/linux/riscv64_qemu_virt_linux_config
 --- buildroot-ori/tee/linux/riscv64_qemu_virt_linux_config	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/linux/riscv64_qemu_virt_linux_config	2021-10-01 19:17:37.889729569 +0800
++++ buildroot/tee/linux/riscv64_qemu_virt_linux_config	2025-01-16 14:08:58.364452480 +0800
 @@ -0,0 +1,4090 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -31746,7 +31768,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +# end of Documentation
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/Config.in buildroot/tee/mbedtee/Config.in
 --- buildroot-ori/tee/mbedtee/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/Config.in	2021-10-01 19:17:37.889729569 +0800
++++ buildroot/tee/mbedtee/Config.in	2025-01-16 14:08:58.365452480 +0800
 @@ -0,0 +1,28 @@
 +config BR2_PACKAGE_MBEDTEE
 +	bool "mbedtee packages"
@@ -31778,7 +31800,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +endif
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-api/Config.in buildroot/tee/mbedtee/mbedtee-client-api/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-client-api/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-api/Config.in	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-api/Config.in	2025-01-16 14:08:58.366452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_CLIENT_API
 +	bool "mbedtee client API"
@@ -31787,7 +31809,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		MbedTEE - GlobalPlatform Client API
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-api/mbedtee-client-api.mk buildroot/tee/mbedtee/mbedtee-client-api/mbedtee-client-api.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-client-api/mbedtee-client-api.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-api/mbedtee-client-api.mk	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-api/mbedtee-client-api.mk	2025-01-16 14:08:58.366452480 +0800
 @@ -0,0 +1,49 @@
 +# =========================================================
 +# GlobalPlatform Client API @ mbedtee
@@ -31840,7 +31862,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-app/Config.in buildroot/tee/mbedtee/mbedtee-client-app/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-client-app/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-app/Config.in	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-app/Config.in	2025-01-16 14:08:58.366452480 +0800
 @@ -0,0 +1,11 @@
 +config BR2_PACKAGE_MBEDTEE_CLIENT_APP
 +	bool "mbedtee client APP"
@@ -31855,12 +31877,12 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +endif
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-client-app.mk buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-client-app.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-client-app.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-client-app.mk	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-client-app.mk	2025-01-16 14:08:58.366452480 +0800
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/mbedtee/mbedtee-client-app/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/Config.in buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/Config.in	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/Config.in	2025-01-16 14:08:58.367452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_GLOBALPLATFORM_CLIENT
 +	bool "mbedtee GlobalPlatform client"
@@ -31869,7 +31891,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		GlobalPlatform TestSuite @ REE
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/mbedtee-globalplatform-client.mk buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/mbedtee-globalplatform-client.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/mbedtee-globalplatform-client.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/mbedtee-globalplatform-client.mk	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-globalplatform-client/mbedtee-globalplatform-client.mk	2025-01-16 14:08:58.367452480 +0800
 @@ -0,0 +1,30 @@
 +# =========================================================
 +# GlobalPlatform TestSuite @ REE
@@ -31903,7 +31925,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/Config.in buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/Config.in	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/Config.in	2025-01-16 14:08:58.367452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_HELLOWORLD_CLIENT
 +	bool "mbedtee HelloWorld client"
@@ -31912,7 +31934,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		HelloWorld Client APP @ REE
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/mbedtee-helloworld-client.mk buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/mbedtee-helloworld-client.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/mbedtee-helloworld-client.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/mbedtee-helloworld-client.mk	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-client-app/mbedtee-helloworld-client/mbedtee-helloworld-client.mk	2025-01-16 14:08:58.368452480 +0800
 @@ -0,0 +1,30 @@
 +# =========================================================
 +# HelloWorld Client APP @ REE
@@ -31946,7 +31968,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-common/Config.in buildroot/tee/mbedtee/mbedtee-common/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-common/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-common/Config.in	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-common/Config.in	2025-01-16 14:08:58.368452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_COMMON
 +	bool "mbedtee common"
@@ -31955,7 +31977,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		MbedTEE - Common Files for REE and TEE
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-common/mbedtee-common.mk buildroot/tee/mbedtee/mbedtee-common/mbedtee-common.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-common/mbedtee-common.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-common/mbedtee-common.mk	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-common/mbedtee-common.mk	2025-01-16 14:08:58.369452480 +0800
 @@ -0,0 +1,20 @@
 +# =========================================================
 +# MbedTEE Common Files for REE, TEE and TA
@@ -31979,7 +32001,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-crypto/Config.in buildroot/tee/mbedtee/mbedtee-crypto/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-crypto/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-crypto/Config.in	2021-10-01 19:17:37.890729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-crypto/Config.in	2025-01-16 14:08:58.369452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_CRYPTO
 +	bool "mbedtee cryptotool"
@@ -31988,7 +32010,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		mbedtee - CryptoTool for crypt/signing TA
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-crypto/mbedtee-crypto.mk buildroot/tee/mbedtee/mbedtee-crypto/mbedtee-crypto.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-crypto/mbedtee-crypto.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-crypto/mbedtee-crypto.mk	2021-10-01 19:17:37.891729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-crypto/mbedtee-crypto.mk	2025-01-16 14:08:58.369452480 +0800
 @@ -0,0 +1,30 @@
 +# =========================================================
 +# MBEDTEE CRYPTO
@@ -32022,12 +32044,12 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee.mk buildroot/tee/mbedtee/mbedtee.mk
 --- buildroot-ori/tee/mbedtee/mbedtee.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee.mk	2021-10-01 19:17:37.891729569 +0800
++++ buildroot/tee/mbedtee/mbedtee.mk	2025-01-16 14:08:58.370452480 +0800
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/mbedtee/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-os/Config.in buildroot/tee/mbedtee/mbedtee-os/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-os/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-os/Config.in	2021-10-01 19:17:37.891729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-os/Config.in	2025-01-16 14:08:58.370452480 +0800
 @@ -0,0 +1,9 @@
 +config BR2_PACKAGE_MBEDTEE_OS
 +	bool "mbedtee OS"
@@ -32040,7 +32062,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +	  with mbedtee system support
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-os/mbedtee-os.mk buildroot/tee/mbedtee/mbedtee-os/mbedtee-os.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-os/mbedtee-os.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-os/mbedtee-os.mk	2025-01-02 06:24:56.994215565 +0800
++++ buildroot/tee/mbedtee/mbedtee-os/mbedtee-os.mk	2025-01-16 14:08:58.370452480 +0800
 @@ -0,0 +1,103 @@
 +# =========================================================
 +# MBEDTEE OS
@@ -32147,7 +32169,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-supp/Config.in buildroot/tee/mbedtee/mbedtee-supp/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-supp/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-supp/Config.in	2021-10-01 19:17:37.891729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-supp/Config.in	2025-01-16 14:08:58.370452480 +0800
 @@ -0,0 +1,6 @@
 +config BR2_PACKAGE_MBEDTEE_SUPP
 +	bool "mbedtee supplicant"
@@ -32157,7 +32179,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		(handles the requests in Linux userspace, e.g. REEFS) 
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-supp/mbedtee-supp.mk buildroot/tee/mbedtee/mbedtee-supp/mbedtee-supp.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-supp/mbedtee-supp.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-supp/mbedtee-supp.mk	2021-10-01 19:17:37.891729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-supp/mbedtee-supp.mk	2025-01-16 14:08:58.371452480 +0800
 @@ -0,0 +1,28 @@
 +# ===========================================================
 +# linux daemon for handling the mbedtee requests, e.g. REEFS
@@ -32189,7 +32211,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-ta/Config.in buildroot/tee/mbedtee/mbedtee-ta/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-ta/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-ta/Config.in	2021-10-01 19:17:37.891729569 +0800
++++ buildroot/tee/mbedtee/mbedtee-ta/Config.in	2025-01-16 14:08:58.371452480 +0800
 @@ -0,0 +1,12 @@
 +config BR2_PACKAGE_MBEDTEE_TA
 +	bool "mbedtee TA"
@@ -32205,7 +32227,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +endif
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/Config.in buildroot/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/Config.in	2021-10-01 19:17:37.892729570 +0800
++++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/Config.in	2025-01-16 14:08:58.371452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_GLOBALPLATFORM_TA
 +	bool "mbedtee GlobalPlatform TA"
@@ -32214,7 +32236,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		TA - GlobalPlatform TEE test suite
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/mbedtee-globalplatform-ta.mk buildroot/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/mbedtee-globalplatform-ta.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/mbedtee-globalplatform-ta.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/mbedtee-globalplatform-ta.mk	2021-10-01 19:17:37.892729570 +0800
++++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-globalplatform-ta/mbedtee-globalplatform-ta.mk	2025-01-16 14:08:58.372452480 +0800
 @@ -0,0 +1,73 @@
 +# =========================================================
 +# MBEDTEE GlobalPlatform TestSuite TAs
@@ -32291,7 +32313,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/Config.in buildroot/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/Config.in	2021-10-01 19:17:37.892729570 +0800
++++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/Config.in	2025-01-16 14:08:58.372452480 +0800
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_MBEDTEE_HELLOWORLD_TA
 +	bool "mbedtee HelloWorld TA"
@@ -32300,7 +32322,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +		TA - Hello World
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/mbedtee-helloworld-ta.mk buildroot/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/mbedtee-helloworld-ta.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/mbedtee-helloworld-ta.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/mbedtee-helloworld-ta.mk	2021-10-01 19:17:37.892729570 +0800
++++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-helloworld-ta/mbedtee-helloworld-ta.mk	2025-01-16 14:08:58.372452480 +0800
 @@ -0,0 +1,63 @@
 +# =========================================================
 +# MBEDTEE HelloWorld TA
@@ -32367,12 +32389,12 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-ta.mk buildroot/tee/mbedtee/mbedtee-ta/mbedtee-ta.mk
 --- buildroot-ori/tee/mbedtee/mbedtee-ta/mbedtee-ta.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-ta.mk	2021-10-01 19:17:37.892729570 +0800
++++ buildroot/tee/mbedtee/mbedtee-ta/mbedtee-ta.mk	2025-01-16 14:08:58.373452480 +0800
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/mbedtee/mbedtee-ta/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/Config.in buildroot/toolchain/Config.in
---- buildroot-ori/toolchain/Config.in	2025-01-02 09:20:33.473128236 +0800
-+++ buildroot/toolchain/Config.in	2024-12-30 20:38:03.307880663 +0800
+--- buildroot-ori/toolchain/Config.in	2025-01-16 14:15:43.903471817 +0800
++++ buildroot/toolchain/Config.in	2025-01-16 14:10:43.457457491 +0800
 @@ -60,6 +60,11 @@ endchoice
  
  source "toolchain/toolchain-buildroot/Config.in"
@@ -32387,7 +32409,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
  
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/Config.in buildroot/toolchain/toolchain-mbedtee-aarch64/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-aarch64/Config.in	2021-10-01 19:17:37.893729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-aarch64/Config.in	2025-01-16 14:08:58.374452480 +0800
 @@ -0,0 +1,7 @@
 +config BR2_TOOLCHAIN_MBEDTEE_AARCH64
 +	bool "mbedtee toolchain"
@@ -32398,13 +32420,13 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/--toolchain-mbedtee-aarch64.hash buildroot/toolchain/toolchain-mbedtee-aarch64/--toolchain-mbedtee-aarch64.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/--toolchain-mbedtee-aarch64.hash	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-aarch64/--toolchain-mbedtee-aarch64.hash	2021-10-01 19:17:37.893729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-aarch64/--toolchain-mbedtee-aarch64.hash	2025-01-16 14:08:58.374452480 +0800
 @@ -0,0 +1,2 @@
 +4# Locally calculated
 +sha256 381f65d22c7dae3cd7ae502dd28d75b2a5279c29d659c54b8ef2b3fc4e77f4c9 aarch64-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk	2021-10-01 19:17:37.893729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk	2025-01-16 14:08:58.374452480 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32437,7 +32459,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/Config.in buildroot/toolchain/toolchain-mbedtee-arm/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-arm/Config.in	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-arm/Config.in	2025-01-16 14:08:58.375452480 +0800
 @@ -0,0 +1,7 @@
 +config BR2_TOOLCHAIN_MBEDTEE_ARM
 +	bool "MbedTEE Toolchain"
@@ -32448,13 +32470,13 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/--toolchain-mbedtee-arm.hash buildroot/toolchain/toolchain-mbedtee-arm/--toolchain-mbedtee-arm.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/--toolchain-mbedtee-arm.hash	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-arm/--toolchain-mbedtee-arm.hash	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-arm/--toolchain-mbedtee-arm.hash	2025-01-16 14:08:58.375452480 +0800
 @@ -0,0 +1,2 @@
 +# Locally calculated
 +sha256 d2cfcac5f9828d00c64be65e3a506eebb9b816203c91db07f936f316c6d4306e arm-mbedtee-eabi-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk	2025-01-16 14:08:58.375452480 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32487,7 +32509,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/Config.in buildroot/toolchain/toolchain-mbedtee-mips/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-mips/Config.in	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-mips/Config.in	2025-01-16 14:08:58.376452480 +0800
 @@ -0,0 +1,6 @@
 +config BR2_TOOLCHAIN_MBEDTEE_MIPS
 +	bool "mbedtee MIPS32 Toolchain"
@@ -32497,13 +32519,13 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/--toolchain-mbedtee-mips.hash buildroot/toolchain/toolchain-mbedtee-mips/--toolchain-mbedtee-mips.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/--toolchain-mbedtee-mips.hash	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-mips/--toolchain-mbedtee-mips.hash	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-mips/--toolchain-mbedtee-mips.hash	2025-01-16 14:08:58.376452480 +0800
 @@ -0,0 +1,2 @@
 +# Locally calculated
 +sha256 c9363dfa7df877471bbe892b78d33637439fdbbeb5c77db71e31730f5f6e438e mips-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk	2025-01-16 14:08:58.376452480 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32536,7 +32558,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/Config.in buildroot/toolchain/toolchain-mbedtee-riscv32/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv32/Config.in	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv32/Config.in	2025-01-16 14:08:58.376452480 +0800
 @@ -0,0 +1,6 @@
 +config BR2_TOOLCHAIN_MBEDTEE_RISCV32
 +	bool "mbedtee riscv32 toolchain"
@@ -32546,13 +32568,13 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/--toolchain-mbedtee-riscv32.hash buildroot/toolchain/toolchain-mbedtee-riscv32/--toolchain-mbedtee-riscv32.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/--toolchain-mbedtee-riscv32.hash	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv32/--toolchain-mbedtee-riscv32.hash	2021-10-01 19:17:37.894729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv32/--toolchain-mbedtee-riscv32.hash	2025-01-16 14:08:58.376452480 +0800
 @@ -0,0 +1,2 @@
 +# Locally calculated
 +sha256 c9363dfa7df877471bbe892b78d33637439fdbbeb5c77db71e31730f5f6e438e riscv32-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk	2021-10-01 19:17:37.895729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk	2025-01-16 14:08:58.377452480 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32585,7 +32607,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +$(eval $(generic-package))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/Config.in buildroot/toolchain/toolchain-mbedtee-riscv64/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/Config.in	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv64/Config.in	2021-10-01 19:17:37.895729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv64/Config.in	2025-01-16 14:08:58.377452480 +0800
 @@ -0,0 +1,6 @@
 +config BR2_TOOLCHAIN_MBEDTEE_RISCV64
 +	bool "mbedtee riscv64 toolchain"
@@ -32595,13 +32617,13 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/--toolchain-mbedtee-riscv64.hash buildroot/toolchain/toolchain-mbedtee-riscv64/--toolchain-mbedtee-riscv64.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/--toolchain-mbedtee-riscv64.hash	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv64/--toolchain-mbedtee-riscv64.hash	2021-10-01 19:17:37.895729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv64/--toolchain-mbedtee-riscv64.hash	2025-01-16 14:08:58.377452480 +0800
 @@ -0,0 +1,2 @@
 +# Locally calculated
 +sha256 c9363dfa7df877471bbe892b78d33637439fdbbeb5c77db71e31730f5f6e438e riscv64-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk	2021-10-01 19:17:37.895729570 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk	2025-01-16 14:08:58.378452480 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
