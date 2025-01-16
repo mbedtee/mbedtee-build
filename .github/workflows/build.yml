@@ -1,0 +1,185 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron:  '00 5,18 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a set of commands using the runners shell
+      - name: Download buildroot
+        run: ./buildroot.sh
+ 
+      - name: Build mbedtee_vexpress_ca78
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca78_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca78
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca78
+          path: buildroot/output/images
+
+      - name: Build mbedtee_vexpress_ca15
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca15_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca15
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca15
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_aarch64
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_aarch64_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_aarch64
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_aarch64
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_arm
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_arm_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_arm
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_arm
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv64_linux
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv64_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv64_linux
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv32_linux
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv32_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv32_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv32_linux
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_malta_mips32r2
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_malta_mips32r2_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_malta_mips32r2
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_malta_mips32r2
+          path: buildroot/output/images
+
+      - name: Build mbedtee_vexpress_ca510x4_ca710x4
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca510x4_ca710x4_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca510x4_ca710x4
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca510x4_ca710x4
+          path: buildroot/output/images
+
+      - name: Build mbedtee_vexpress_ca5
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca5_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca5
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca5
+          path: buildroot/output/images
+
+      - name: Build mbedtee_vexpress_ca65
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca65_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca65
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca65
+          path: buildroot/output/images
+ 
+      - name: Build mbedtee_vexpress_ca17x4_ca7x4
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca17x4_ca7x4_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca17x4_ca7x4
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca17x4_ca7x4
+          path: buildroot/output/images
+
+      - name: Build mbedtee_vexpress_ca53
+        run: |
+          cd buildroot && make clean && make mbedtee_vexpress_ca53_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca53
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca53
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_sifive_u_riscv64
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_sifive_u_riscv64_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_sifive_u_riscv64
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_sifive_u_riscv64
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_sifive_u_riscv32
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_sifive_u_riscv32_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_sifive_u_riscv32
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_sifive_u_riscv32
+          path: buildroot/output/images
+
+      - name: Build mbedtee_salix_soc_mips74k
+        run: |
+          cd buildroot && make clean && make mbedtee_salix_soc_mips74k_defconfig && make
+      - name: Upload Artifact - mbedtee_salix_soc_mips74k
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_salix_soc_mips74k
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv64
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv64_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv64
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv64
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv32
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv32_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv32
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv32
+          path: buildroot/output/images
