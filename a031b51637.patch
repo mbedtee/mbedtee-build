@@ -1,6 +1,6 @@
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Config.in buildroot/Config.in
---- buildroot-ori/Config.in	2025-02-18 14:35:37.808037865 +0800
-+++ buildroot/Config.in	2025-02-18 14:25:17.009008263 +0800
+--- buildroot-ori/Config.in	2025-03-01 09:24:14.290465567 +0800
++++ buildroot/Config.in	2025-03-01 09:22:00.411459183 +0800
 @@ -995,6 +995,8 @@ source "system/Config.in"
  
  source "linux/Config.in"
@@ -791,8 +791,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MKPASSWD=y
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/linux.mk buildroot/linux/linux.mk
---- buildroot-ori/linux/linux.mk	2025-02-18 14:35:37.955037872 +0800
-+++ buildroot/linux/linux.mk	2025-02-18 14:25:17.010008263 +0800
+--- buildroot-ori/linux/linux.mk	2025-03-01 09:24:14.512465578 +0800
++++ buildroot/linux/linux.mk	2025-03-01 09:22:00.413459183 +0800
 @@ -123,6 +123,8 @@ ifeq ($(BR2_LINUX_KERNEL_NEEDS_HOST_OPEN
  LINUX_DEPENDENCIES += host-openssl
  endif
@@ -13763,8 +13763,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  * OP-TEE specific capabilities
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Makefile buildroot/Makefile
---- buildroot-ori/Makefile	2025-02-18 14:35:37.810037865 +0800
-+++ buildroot/Makefile	2025-02-18 14:25:17.010008263 +0800
+--- buildroot-ori/Makefile	2025-03-01 09:24:14.292465567 +0800
++++ buildroot/Makefile	2025-03-01 09:22:00.412459183 +0800
 @@ -535,6 +535,7 @@ include $(sort $(wildcard package/*/*.mk
  
  include boot/common.mk
@@ -13774,8 +13774,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Make
  
  # If using a br2-external tree, the BR2_EXTERNAL_$(NAME)_PATH variables
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/busybox/inittab buildroot/package/busybox/inittab
---- buildroot-ori/package/busybox/inittab	2025-02-18 14:35:37.994037874 +0800
-+++ buildroot/package/busybox/inittab	2025-02-18 14:25:17.011008263 +0800
+--- buildroot-ori/package/busybox/inittab	2025-03-01 09:24:14.561465580 +0800
++++ buildroot/package/busybox/inittab	2025-03-01 09:22:00.414459183 +0800
 @@ -29,7 +29,7 @@ null::sysinit:/bin/ln -sf /proc/self/fd/
  ::sysinit:/etc/init.d/rcS
  
@@ -13786,8 +13786,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/pack
  # Stuff to do for the 3-finger salute
  #::ctrlaltdel:/sbin/reboot
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/pkg-autotools.mk buildroot/package/pkg-autotools.mk
---- buildroot-ori/package/pkg-autotools.mk	2025-02-18 14:35:38.496037898 +0800
-+++ buildroot/package/pkg-autotools.mk	2025-02-18 14:25:17.011008263 +0800
+--- buildroot-ori/package/pkg-autotools.mk	2025-03-01 09:24:15.136465607 +0800
++++ buildroot/package/pkg-autotools.mk	2025-03-01 09:22:00.415459183 +0800
 @@ -198,6 +198,7 @@ else
  # because it often relies on host tools which may or may not be
  # installed.
@@ -13795,10 +13795,10 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/pack
 +	@cd $$($$(PKG)_SRCDIR) && find . -exec touch -c -t 202010010000 --time=mtime '{}' +
  	(cd $$($$(PKG)_SRCDIR) && rm -rf config.cache; \
  	$$(HOST_CONFIGURE_OPTS) \
- 	CFLAGS="$$(HOST_CFLAGS)" \
+ 	$$($$(PKG)_CONF_ENV) \
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/pkg-generic.mk buildroot/package/pkg-generic.mk
---- buildroot-ori/package/pkg-generic.mk	2025-02-18 14:35:38.496037898 +0800
-+++ buildroot/package/pkg-generic.mk	2025-02-18 14:25:17.011008263 +0800
+--- buildroot-ori/package/pkg-generic.mk	2025-03-01 09:24:15.137465607 +0800
++++ buildroot/package/pkg-generic.mk	2025-03-01 09:22:00.416459183 +0800
 @@ -215,6 +215,7 @@ $(BUILD_DIR)/%/.stamp_extracted:
  	$(Q)chmod -R +rw $(@D)
  	$(foreach hook,$($(PKG)_POST_EXTRACT_HOOKS),$(call $(hook))$(sep))
@@ -32393,8 +32393,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/mbedtee/mbedtee-ta/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/Config.in buildroot/toolchain/Config.in
---- buildroot-ori/toolchain/Config.in	2025-02-18 14:35:38.915037918 +0800
-+++ buildroot/toolchain/Config.in	2025-02-18 14:25:17.012008263 +0800
+--- buildroot-ori/toolchain/Config.in	2025-03-01 09:24:15.851465642 +0800
++++ buildroot/toolchain/Config.in	2025-03-01 09:22:00.419459184 +0800
 @@ -60,6 +60,11 @@ endchoice
  
  source "toolchain/toolchain-buildroot/Config.in"
