@@ -13,7 +13,7 @@ rm -rf buildroot buildroot-${version}
 
 export GIT_SSL_NO_VERIFY=1
 
-git clone https://git.busybox.net/buildroot buildroot-${version}
+git clone https://gitlab.com/buildroot.org/buildroot.git buildroot-${version}
 
 git -C buildroot-${version} checkout ${version}
 

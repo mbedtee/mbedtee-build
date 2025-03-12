@@ -13,7 +13,7 @@ if [ -z "$br_patch" ]; then
 fi
 br_version=$(basename $br_patch .patch)
 rm -rf buildroot buildroot-${br_version}
-git clone https://git.busybox.net/buildroot buildroot-${br_version}
+git clone https://gitlab.com/buildroot.org/buildroot.git buildroot-${br_version}
 git -C buildroot-${br_version} checkout ${br_version}
 patch --no-backup-if-mismatch -d buildroot-${br_version} -N -r /dev/null -p1 < ${br_patch}
 mv buildroot-${br_version} buildroot
