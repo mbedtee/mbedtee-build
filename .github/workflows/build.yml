@@ -85,15 +85,6 @@ jobs:
           name: mbedtee_qemu_virt_riscv32_linux
           path: buildroot/output/images
 
-      - name: Build mbedtee_qemu_malta_mips32r2
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_malta_mips32r2_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_malta_mips32r2
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_malta_mips32r2
-          path: buildroot/output/images
-
       - name: Build mbedtee_vexpress_ca510x4_ca710x4
         run: |
           cd buildroot && make clean && make mbedtee_vexpress_ca510x4_ca710x4_defconfig && make
@@ -139,6 +130,24 @@ jobs:
           name: mbedtee_vexpress_ca53
           path: buildroot/output/images
 
+      - name: Build mbedtee_qemu_xiangshan_kmh_linux
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_xiangshan_kmh_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_xiangshan_kmh_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_xiangshan_kmh_linux
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv64_imsic_linux
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv64_imsic_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_imsic_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv64_imsic_linux
+          path: buildroot/output/images
+
       - name: Build mbedtee_qemu_sifive_u_riscv64
         run: |
           cd buildroot && make clean && make mbedtee_qemu_sifive_u_riscv64_defconfig && make
@@ -164,6 +173,15 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mbedtee_salix_soc_mips74k
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv32_imsic_linux
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv32_imsic_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv32_imsic_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv32_imsic_linux
           path: buildroot/output/images
 
       - name: Build mbedtee_qemu_virt_riscv64
@@ -236,4 +254,22 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mbedtee_qemu_imx7d
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv64_aplic_linux
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_virt_riscv64_aplic_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_aplic_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv64_aplic_linux
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_malta_mips32r2
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_malta_mips32r2_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_malta_mips32r2
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_malta_mips32r2
           path: buildroot/output/images
