@@ -1,6 +1,6 @@
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Config.in buildroot/Config.in
---- buildroot-ori/Config.in	2025-06-16 15:08:01.196125495 +0800
-+++ buildroot/Config.in	2025-06-15 21:00:46.991448244 +0800
+--- buildroot-ori/Config.in	2025-08-15 11:08:28.316652227 +0800
++++ buildroot/Config.in	2025-08-14 17:29:50.279994900 +0800
 @@ -1015,6 +1015,8 @@ source "system/Config.in"
  
  source "linux/Config.in"
@@ -253,7 +253,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_riscv32_linux_defconfig buildroot/configs/mbedtee_qemu_virt_riscv32_linux_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_riscv32_linux_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_riscv32_linux_defconfig	2025-05-31 23:12:46.379373554 +0800
++++ buildroot/configs/mbedtee_qemu_virt_riscv32_linux_defconfig	2025-08-14 11:51:07.436057587 +0800
 @@ -0,0 +1,46 @@
 +BR2_riscv=y
 +BR2_RISCV_32=y
@@ -292,7 +292,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +# BR2_TARGET_ROOTFS_TAR is not set
 +BR2_TARGET_OPENSBI=y
 +BR2_TARGET_OPENSBI_CUSTOM_VERSION=y
-+BR2_TARGET_OPENSBI_CUSTOM_VERSION_VALUE="1.5"
++BR2_TARGET_OPENSBI_CUSTOM_VERSION_VALUE="1.7"
 +BR2_TARGET_OPENSBI_PLAT="generic"
 +# BR2_TARGET_OPENSBI_INSTALL_DYNAMIC_IMG is not set
 +BR2_TARGET_OPENSBI_LINUX_PAYLOAD=y
@@ -339,7 +339,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_virt_riscv64_linux_defconfig buildroot/configs/mbedtee_qemu_virt_riscv64_linux_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_virt_riscv64_linux_defconfig	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/configs/mbedtee_qemu_virt_riscv64_linux_defconfig	2025-05-31 23:12:46.379373554 +0800
++++ buildroot/configs/mbedtee_qemu_virt_riscv64_linux_defconfig	2025-08-14 11:51:23.993363362 +0800
 @@ -0,0 +1,45 @@
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
@@ -377,7 +377,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +# BR2_TARGET_ROOTFS_TAR is not set
 +BR2_TARGET_OPENSBI=y
 +BR2_TARGET_OPENSBI_CUSTOM_VERSION=y
-+BR2_TARGET_OPENSBI_CUSTOM_VERSION_VALUE="1.5"
++BR2_TARGET_OPENSBI_CUSTOM_VERSION_VALUE="1.7"
 +BR2_TARGET_OPENSBI_PLAT="generic"
 +# BR2_TARGET_OPENSBI_INSTALL_DYNAMIC_IMG is not set
 +BR2_TARGET_OPENSBI_LINUX_PAYLOAD=y
@@ -795,8 +795,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/conf
 +BR2_PACKAGE_HOST_MKPASSWD=y
 +BR2_PACKAGE_HOST_MTOOLS=y
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linux/linux.mk buildroot/linux/linux.mk
---- buildroot-ori/linux/linux.mk	2025-06-16 15:08:01.525349202 +0800
-+++ buildroot/linux/linux.mk	2025-06-15 21:00:46.993449288 +0800
+--- buildroot-ori/linux/linux.mk	2025-08-15 11:08:28.668658300 +0800
++++ buildroot/linux/linux.mk	2025-08-14 17:29:50.283994978 +0800
 @@ -123,6 +123,8 @@ ifeq ($(BR2_LINUX_KERNEL_NEEDS_HOST_OPEN
  LINUX_DEPENDENCIES += host-openssl
  endif
@@ -13767,9 +13767,9 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/linu
 +  * OP-TEE specific capabilities
 +  */
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Makefile buildroot/Makefile
---- buildroot-ori/Makefile	2025-06-16 15:08:01.200128214 +0800
-+++ buildroot/Makefile	2025-06-15 21:00:46.993449288 +0800
-@@ -535,6 +535,7 @@ include $(sort $(wildcard package/*/*.mk
+--- buildroot-ori/Makefile	2025-08-15 11:08:28.318652261 +0800
++++ buildroot/Makefile	2025-08-14 17:29:50.280994919 +0800
+@@ -536,6 +536,7 @@ include $(sort $(wildcard package/*/*.mk
  
  include boot/common.mk
  include linux/linux.mk
@@ -13778,8 +13778,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/Make
  
  # If using a br2-external tree, the BR2_EXTERNAL_$(NAME)_PATH variables
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/busybox/inittab buildroot/package/busybox/inittab
---- buildroot-ori/package/busybox/inittab	2025-06-16 15:08:01.589392720 +0800
-+++ buildroot/package/busybox/inittab	2025-06-15 21:00:46.995450331 +0800
+--- buildroot-ori/package/busybox/inittab	2025-08-15 11:08:28.748659681 +0800
++++ buildroot/package/busybox/inittab	2025-08-14 17:29:50.284994997 +0800
 @@ -29,7 +29,7 @@ null::sysinit:/bin/ln -sf /proc/self/fd/
  ::sysinit:/etc/init.d/rcS
  
@@ -13790,8 +13790,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/pack
  # Stuff to do for the 3-finger salute
  #::ctrlaltdel:/sbin/reboot
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/pkg-autotools.mk buildroot/package/pkg-autotools.mk
---- buildroot-ori/package/pkg-autotools.mk	2025-06-16 15:08:02.466983816 +0800
-+++ buildroot/package/pkg-autotools.mk	2025-06-15 21:00:46.996450853 +0800
+--- buildroot-ori/package/pkg-autotools.mk	2025-08-15 11:08:29.696676037 +0800
++++ buildroot/package/pkg-autotools.mk	2025-08-14 17:29:50.285995016 +0800
 @@ -200,6 +200,7 @@ else
  # because it often relies on host tools which may or may not be
  # installed.
@@ -13801,8 +13801,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/pack
  	$$(HOST_CONFIGURE_OPTS) \
  	$$($$(PKG)_CONF_ENV) \
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/package/pkg-generic.mk buildroot/package/pkg-generic.mk
---- buildroot-ori/package/pkg-generic.mk	2025-06-16 15:08:02.467984485 +0800
-+++ buildroot/package/pkg-generic.mk	2025-06-15 21:00:46.997451374 +0800
+--- buildroot-ori/package/pkg-generic.mk	2025-08-15 11:08:29.696676037 +0800
++++ buildroot/package/pkg-generic.mk	2025-08-14 17:29:50.286995036 +0800
 @@ -215,6 +215,7 @@ $(BUILD_DIR)/%/.stamp_extracted:
  	$(Q)chmod -R +rw $(@D)
  	$(foreach hook,$($(PKG)_POST_EXTRACT_HOOKS),$(call $(hook))$(sep))
@@ -32397,8 +32397,8 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/
 @@ -0,0 +1 @@
 +include $(sort $(wildcard tee/mbedtee/mbedtee-ta/*/*.mk))
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/Config.in buildroot/toolchain/Config.in
---- buildroot-ori/toolchain/Config.in	2025-06-16 15:08:03.570715403 +0800
-+++ buildroot/toolchain/Config.in	2025-06-15 21:00:46.998451896 +0800
+--- buildroot-ori/toolchain/Config.in	2025-08-15 11:08:30.988698329 +0800
++++ buildroot/toolchain/Config.in	2025-08-14 17:29:50.288995075 +0800
 @@ -60,6 +60,11 @@ endchoice
  
  source "toolchain/toolchain-buildroot/Config.in"
@@ -32430,7 +32430,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +sha256 381f65d22c7dae3cd7ae502dd28d75b2a5279c29d659c54b8ef2b3fc4e77f4c9 aarch64-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk	2025-06-07 19:28:05.184170830 +0800
++++ buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk	2025-08-12 15:21:38.852168390 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32438,7 +32438,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +#
 +################################################################################
 +
-+TOOLCHAIN_MBEDTEE_AARCH64_VERSION = 15.1.0
++TOOLCHAIN_MBEDTEE_AARCH64_VERSION = 15.2.0
 +
 +TOOLCHAIN_MBEDTEE_AARCH64_NAME = toolchain-mbedtee-aarch64
 +TOOLCHAIN_MBEDTEE_AARCH64_INSTALL_DIR=$(HOST_DIR)/opt/$(TOOLCHAIN_MBEDTEE_AARCH64_NAME)
@@ -32449,7 +32449,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +TOOLCHAIN_MBEDTEE_AARCH64_CXX=$(TOOLCHAIN_MBEDTEE_AARCH64_CROSS)g++
 +TOOLCHAIN_MBEDTEE_AARCH64_READELF=$(TOOLCHAIN_MBEDTEE_AARCH64_CROSS)readelf
 +
-+TOOLCHAIN_MBEDTEE_AARCH64_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VVRzJtQ2RZR2V0SWhrQzFoRHlVU2FjQmVTd0c5WERweHI5LWVZa2wzZU4xQUE_ZT16MTRnNGU
++TOOLCHAIN_MBEDTEE_AARCH64_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VTSFRpUHhpZHQ1RWlBSDlkOFpZZ19RQnFvNUtKTE5Sd1lXQVdaVUVTeU5YLVE_ZT1RdUFjc2E
 +TOOLCHAIN_MBEDTEE_AARCH64_SOURCE = aarch64-mbedtee-elf-$(TOOLCHAIN_MBEDTEE_AARCH64_VERSION).tar.bz2
 +
 +TOOLCHAIN_MBEDTEE_AARCH64_NO_FASTBUILD = y
@@ -32480,7 +32480,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +sha256 d2cfcac5f9828d00c64be65e3a506eebb9b816203c91db07f936f316c6d4306e arm-mbedtee-eabi-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk	2025-06-07 19:27:02.497347924 +0800
++++ buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk	2025-08-12 15:56:29.723337317 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32488,7 +32488,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +#
 +################################################################################
 +
-+TOOLCHAIN_MBEDTEE_ARM_VERSION = 15.1.0
++TOOLCHAIN_MBEDTEE_ARM_VERSION = 15.2.0
 +
 +TOOLCHAIN_MBEDTEE_ARM_NAME = toolchain-mbedtee-arm
 +TOOLCHAIN_MBEDTEE_ARM_INSTALL_DIR=$(HOST_DIR)/opt/$(TOOLCHAIN_MBEDTEE_ARM_NAME)
@@ -32499,7 +32499,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +TOOLCHAIN_MBEDTEE_ARM_CXX=$(TOOLCHAIN_MBEDTEE_ARM_CROSS)g++
 +TOOLCHAIN_MBEDTEE_ARM_READELF=$(TOOLCHAIN_MBEDTEE_ARM_CROSS)readelf
 +
-+TOOLCHAIN_MBEDTEE_ARM_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VZVkxlei1pUjBKSmhMeWdsTWhIYlhzQjJSLU93c0NqVDh1LVZ4MTRyZnZ2bkE_ZT1xNzc4bFk
++TOOLCHAIN_MBEDTEE_ARM_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VYLU1aODd6a1JoTXRUOF85NjkybEhvQm5FbGdQU0pBenkwZ0g5R0tpVUFNMFE_ZT1LaGJ6SGg
 +TOOLCHAIN_MBEDTEE_ARM_SOURCE = arm-mbedtee-eabi-$(TOOLCHAIN_MBEDTEE_ARM_VERSION).tar.bz2
 +
 +TOOLCHAIN_MBEDTEE_ARM_NO_FASTBUILD = y
@@ -32529,7 +32529,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +sha256 c9363dfa7df877471bbe892b78d33637439fdbbeb5c77db71e31730f5f6e438e mips-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk	2025-06-11 11:20:17.329732062 +0800
++++ buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk	2025-08-12 15:59:20.279698748 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32537,7 +32537,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +#
 +################################################################################
 +
-+TOOLCHAIN_MBEDTEE_MIPS_VERSION = 15.1.0
++TOOLCHAIN_MBEDTEE_MIPS_VERSION = 15.2.0
 +
 +TOOLCHAIN_MBEDTEE_MIPS_NAME = toolchain-mbedtee-mips
 +TOOLCHAIN_MBEDTEE_MIPS_INSTALL_DIR=$(HOST_DIR)/opt/$(TOOLCHAIN_MBEDTEE_MIPS_NAME)
@@ -32548,7 +32548,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +TOOLCHAIN_MBEDTEE_MIPS_CXX=$(TOOLCHAIN_MBEDTEE_MIPS_CROSS)g++
 +TOOLCHAIN_MBEDTEE_MIPS_READELF=$(TOOLCHAIN_MBEDTEE_MIPS_CROSS)readelf
 +
-+TOOLCHAIN_MBEDTEE_MIPS_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VlOUtYR2VwTERWUGpENGpxRXVnMFM4QjYyZlFLLWU5S3FFckxNeGw2aUx2S0E_ZT04VzM3eXc
++TOOLCHAIN_MBEDTEE_MIPS_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VYNVM1NUJDdldWS2t1bjNkUjg2QmFnQjNsejFXT3NaN2w3R0xwaU1LYmJwdkE_ZT1SS3V2bGo
 +TOOLCHAIN_MBEDTEE_MIPS_SOURCE = mips-mbedtee-elf-$(TOOLCHAIN_MBEDTEE_MIPS_VERSION).tar.bz2
 +
 +TOOLCHAIN_MBEDTEE_MIPS_NO_FASTBUILD = y
@@ -32578,7 +32578,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +sha256 c9363dfa7df877471bbe892b78d33637439fdbbeb5c77db71e31730f5f6e438e riscv32-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk	2025-06-06 20:18:29.134324715 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk	2025-08-12 15:59:15.653404081 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32586,7 +32586,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +#
 +################################################################################
 +
-+TOOLCHAIN_MBEDTEE_RISCV32_VERSION = 15.1.0
++TOOLCHAIN_MBEDTEE_RISCV32_VERSION = 15.2.0
 +
 +TOOLCHAIN_MBEDTEE_RISCV32_NAME = toolchain-mbedtee-riscv32
 +TOOLCHAIN_MBEDTEE_RISCV32_INSTALL_DIR=$(HOST_DIR)/opt/$(TOOLCHAIN_MBEDTEE_RISCV32_NAME)
@@ -32597,7 +32597,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +TOOLCHAIN_MBEDTEE_RISCV32_CXX=$(TOOLCHAIN_MBEDTEE_RISCV32_CROSS)g++
 +TOOLCHAIN_MBEDTEE_RISCV32_READELF=$(TOOLCHAIN_MBEDTEE_RISCV32_CROSS)readelf
 +
-+TOOLCHAIN_MBEDTEE_RISCV32_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0ViUUplSS12Q3B4Tm9SQ29jTkdkbTdnQmNFM19wcUtyNUZsaUV6QjJEM1F3blE_ZT1Nb3h2Zk8
++TOOLCHAIN_MBEDTEE_RISCV32_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VhSGZha2hleFpORHA5NkxvbXNkSUtnQkg0TkI4NkpVZVpfQ0pwdGR0MG5DWXc_ZT1LaTB1VWk
 +TOOLCHAIN_MBEDTEE_RISCV32_SOURCE = riscv32-mbedtee-elf-$(TOOLCHAIN_MBEDTEE_RISCV32_VERSION).tar.bz2
 +
 +TOOLCHAIN_MBEDTEE_RISCV32_NO_FASTBUILD = y
@@ -32627,7 +32627,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +sha256 c9363dfa7df877471bbe892b78d33637439fdbbeb5c77db71e31730f5f6e438e riscv64-mbedtee-elf-14.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk	1970-01-01 08:00:00.000000000 +0800
-+++ buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk	2025-06-12 21:36:05.372377858 +0800
++++ buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk	2025-08-12 16:00:30.976152181 +0800
 @@ -0,0 +1,29 @@
 +################################################################################
 +#
@@ -32635,7 +32635,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +#
 +################################################################################
 +
-+TOOLCHAIN_MBEDTEE_RISCV64_VERSION = 15.1.0
++TOOLCHAIN_MBEDTEE_RISCV64_VERSION = 15.2.0
 +
 +TOOLCHAIN_MBEDTEE_RISCV64_NAME = toolchain-mbedtee-riscv64
 +TOOLCHAIN_MBEDTEE_RISCV64_INSTALL_DIR=$(HOST_DIR)/opt/$(TOOLCHAIN_MBEDTEE_RISCV64_NAME)
@@ -32646,7 +32646,7 @@ diff -uprN '--exclude=.*' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tool
 +TOOLCHAIN_MBEDTEE_RISCV64_CXX=$(TOOLCHAIN_MBEDTEE_RISCV64_CROSS)g++
 +TOOLCHAIN_MBEDTEE_RISCV64_READELF=$(TOOLCHAIN_MBEDTEE_RISCV64_CROSS)readelf
 +
-+TOOLCHAIN_MBEDTEE_RISCV64_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VmQTFlMVR3dUV4R204TTJrTFBnckVRQmRYNXRRNzVtaEE3bWV2bFh6TEVMN1E_ZT1YYnc4MTg
++TOOLCHAIN_MBEDTEE_RISCV64_SITE = https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy9hZGU1YzFiOWU3MzhkYTRkL0VieEFVcW5ZVi10UHF1M19pNGo5TWVnQmxVUDREMWlMOXRMWUFaeS1NaEVOZHc_ZT1TNms1a1k
 +TOOLCHAIN_MBEDTEE_RISCV64_SOURCE = riscv64-mbedtee-elf-$(TOOLCHAIN_MBEDTEE_RISCV64_VERSION).tar.bz2
 +
 +TOOLCHAIN_MBEDTEE_RISCV64_NO_FASTBUILD = y
