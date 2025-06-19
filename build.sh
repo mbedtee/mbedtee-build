@@ -40,9 +40,9 @@ cd -
 # Step 3. Config and Make the QEMU
 ###########################################################
 rm -rf qemu
-git clone https://gitlab.com/qemu-project/qemu.git && \
-cd qemu && git checkout stable-9.0 && ./configure --prefix=$(pwd)/output --enable-slirp \
-	--target-list=mips64el-softmmu,mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu && \
+git clone https://gitlab.com/qemu-project/qemu.git && cd qemu && \
+if [ ! -z `cat /etc/os-release | grep VERSION_ID | grep 20` ]; then git checkout stable-9.0; fi && \
+./configure --prefix=$(pwd)/output --enable-slirp --target-list=mips64el-softmmu,mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu && \
 make -j8 && make install
 cd -
 
