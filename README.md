@@ -253,6 +253,8 @@ Config/Make: make mbedtee_qemu_virt_riscv64_defconfig && make
 ../qemu/build/qemu-system-riscv64 -M virt -smp 4 -m 4G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -M aclint=on -serial stdio
 ```
 
+
+
 ### RISCV32 (TEE only)
 
 Config/Make: make mbedtee_qemu_virt_riscv32_defconfig && make
@@ -271,6 +273,8 @@ Config/Make: make mbedtee_qemu_sifive_u_riscv32_defconfig && make
 ../qemu/build/qemu-system-riscv32 -M sifive_u -smp 5 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -device loader,addr=0x80000000,cpu-num=4 -serial stdio
 ```
 
+
+
 ### SifiveUnleashed RISCV64  (TEE only)
 
 Config/Make: make mbedtee_qemu_sifive_u_riscv64_defconfig && make
@@ -278,6 +282,8 @@ Config/Make: make mbedtee_qemu_sifive_u_riscv64_defconfig && make
 ```
 ../qemu/build/qemu-system-riscv64 -M sifive_u -smp 5 -m 4G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -device loader,addr=0x80000000,cpu-num=4 -serial stdio
 ```
+
+
 
 ### Malta MIPS32 (TEE only)
 
@@ -288,6 +294,36 @@ Config/Make: make mbedtee_qemu_malta_mips32r2_defconfig && make
 ```
 ../qemu/build/qemu-system-mipsel -M malta -m 1G -cpu 74Kf -kernel output/images/mbedtee.elf -serial stdio
 ```
+
+
+
+### ASpeed AST2600 (REE+TEE)
+
+Config/Make: make mbedtee_qemu_ast2600_defconfig && make
+
+```
+../qemu/build/qemu-system-arm -M ast2600-evb -smp 2 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x85F00000,force-raw=on -device loader,file=output/images/Image,addr=0x86008000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -serial stdio
+```
+
+
+
+### ASpeed AST2700 (REE+TEE)
+
+Config/Make: make mbedtee_qemu_ast2700_defconfig && make
+
+> [!NOTE]
+>
+> Add the following GIC patch to the QEMU aspeed_ast27x0.c aspeed_soc_ast2700_gic_realize() function and rebuild the QEMU.
+>
+> ```
+> qdev_prop_set_bit(gicdev, "has-security-extensions", true); /* line 559 */
+> ```
+
+```
+../qemu/build/qemu-system-aarch64 -M ast2700-evb -smp 4 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x400000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x415F00000,force-raw=on -device loader,file=output/images/Image,addr=0x420000000,force-raw=on -device loader,addr=0x400000000,cpu-num=0 -device loader,addr=0x400000000,cpu-num=1 -device loader,addr=0x400000000,cpu-num=2 -device loader,addr=0x400000000,cpu-num=3 -serial stdio
+```
+
+
 
 <div STYLE="page-break-after: always;"></div>
 
