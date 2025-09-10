@@ -325,6 +325,54 @@ Config/Make: make mbedtee_qemu_ast2700_defconfig && make
 
 
 
+### Raspberry raspi4b (REE+TEE)
+
+Config/Make: make mbedtee_qemu_raspi4b_defconfig && make
+
+> [!NOTE]
+>
+> Security extension is necessary when the processor runs both the REE and TEE mode firmwares, so please add the following GIC patch to the QEMU hw/arm/bcm2838.c bcm2838_realize() function and rebuild the QEMU, otherwise the REE will not be launched.
+>
+> ```
+> object_property_set_bool(OBJECT(&s->gic), "has-security-extensions", true, errp); /* line 127 */
+> ```
+
+```
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M raspi4b -smp 4 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x06000000,force-raw=on  -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+```
+
+
+
+### Xilinx xlnx-versal-virt (REE+TEE)
+
+Config/Make: make mbedtee_qemu_xlnx_versal_virt_defconfig && make
+
+```
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M xlnx-versal-virt -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x06000000,force-raw=on  -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+```
+
+
+
+### Xilinx xlnx-zcu102 (REE+TEE)
+
+Config/Make: make mbedtee_qemu_xlnx_zcu102_defconfig && make
+
+```
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M xlnx-zcu102 -M secure=on,virtualization=on -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x06000000,force-raw=on  -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+```
+
+
+
+### NXP imx7d (REE+TEE)
+
+Config/Make: make mbedtee_qemu_imx7d_defconfig && make
+
+```
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-arm -M mcimx7d-sabre -smp 2 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x85F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x86008000,force-raw=on  -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+```
+
+
+
 <div STYLE="page-break-after: always;"></div>
 
 #  Build and Run @ FastModel

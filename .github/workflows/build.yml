@@ -30,7 +30,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Download buildroot
         run: ./buildroot.sh
- 
+
       - name: Build mbedtee_vexpress_ca78
         run: |
           cd buildroot && make clean && make mbedtee_vexpress_ca78_defconfig && make
@@ -120,7 +120,7 @@ jobs:
         with:
           name: mbedtee_vexpress_ca65
           path: buildroot/output/images
- 
+
       - name: Build mbedtee_vexpress_ca17x4_ca7x4
         run: |
           cd buildroot && make clean && make mbedtee_vexpress_ca17x4_ca7x4_defconfig && make
@@ -182,4 +182,58 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mbedtee_qemu_virt_riscv32
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_ast2600
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_ast2600_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_ast2600
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_ast2600
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_ast2700
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_ast2700_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_ast2700
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_ast2700
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_raspi4b
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_raspi4b_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_raspi4b
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_raspi4b
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_xlnx_versal_virt
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_xlnx_versal_virt_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_xlnx_versal_virt
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_xlnx_versal_virt
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_xlnx_zcu102
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_xlnx_zcu102_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_xlnx_zcu102
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_xlnx_zcu102
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_imx7d
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_imx7d_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_imx7d
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_imx7d
           path: buildroot/output/images
