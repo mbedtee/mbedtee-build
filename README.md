@@ -338,7 +338,7 @@ Config/Make: make mbedtee_qemu_raspi4b_defconfig && make
 > ```
 
 ```
-gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M raspi4b -smp 4 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x06000000,force-raw=on  -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M raspi4b -smp 4 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on -device loader,file=output/images/Image,addr=0x06000000,force-raw=on -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
 ```
 
 
@@ -348,7 +348,7 @@ gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e
 Config/Make: make mbedtee_qemu_xlnx_versal_virt_defconfig && make
 
 ```
-gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M xlnx-versal-virt -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x06000000,force-raw=on  -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M xlnx-versal-virt -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on -device loader,file=output/images/Image,addr=0x06000000,force-raw=on -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
 ```
 
 
@@ -358,7 +358,7 @@ gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e
 Config/Make: make mbedtee_qemu_xlnx_zcu102_defconfig && make
 
 ```
-gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M xlnx-zcu102 -M secure=on,virtualization=on -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x06000000,force-raw=on  -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-aarch64 -M xlnx-zcu102 -M secure=on,virtualization=on -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x00200000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x05F00000,force-raw=on -device loader,file=output/images/Image,addr=0x06000000,force-raw=on -device loader,addr=0x00200000,cpu-num=0 -device loader,addr=0x00200000,cpu-num=1 -device loader,addr=0x00200000,cpu-num=2 -device loader,addr=0x00200000,cpu-num=3 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
 ```
 
 
@@ -368,7 +368,47 @@ gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e
 Config/Make: make mbedtee_qemu_imx7d_defconfig && make
 
 ```
-gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-arm -M mcimx7d-sabre -smp 2 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x85F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x86008000,force-raw=on  -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -serial telnet::5555,server,nowait  -serial telnet::5556,server,nowait
+gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-arm -M mcimx7d-sabre -smp 2 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x85F00000,force-raw=on  -device loader,file=output/images/Image,addr=0x86008000,force-raw=on  -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
+```
+
+### RISCV64-APLIC (REE+TEE）
+
+Run with '-smp 8', aclint is on, 4 cores for LinuxREE, 4 cores for MbedTEE. APLIC direct mode.
+
+Config/Make: make mbedtee_qemu_virt_riscv64_aplic_linux_defconfig && make
+
+```
+../qemu/build/qemu-system-riscv64 -M virt -smp 8 -m 8G -device loader,file=output/images/fw_jump.bin,addr=0x86000000,force-raw=on -device loader,file=output/images/Image,addr=0x86200000,force-raw=on -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -device loader,addr=0x86000000,cpu-num=4 -device loader,addr=0x86000000,cpu-num=5 -device loader,addr=0x86000000,cpu-num=6 -device loader,addr=0x86000000,cpu-num=7 -M aia=aplic -M aclint=on -serial stdio
+```
+
+### RISCV64-IMSIC (REE+TEE）
+
+Run with '-smp 8', 4 cores for LinuxREE, 4 cores for MbedTEE. APLIC MSI mode.
+
+Config/Make: make mbedtee_qemu_virt_riscv64_imsic_linux_defconfig && make
+
+```
+../qemu/build/qemu-system-riscv64 -M virt -smp 8 -m 8G -device loader,file=output/images/fw_jump.bin,addr=0x86000000,force-raw=on -device loader,file=output/images/Image,addr=0x86200000,force-raw=on -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3  -device loader,addr=0x86000000,cpu-num=4 -device loader,addr=0x86000000,cpu-num=5 -device loader,addr=0x86000000,cpu-num=6 -device loader,addr=0x86000000,cpu-num=7 -M aia=aplic-imsic -serial stdio
+```
+
+### RISCV32-IMSIC (REE+TEE）
+
+Run with '-smp 4', 2 cores for LinuxREE, 2 cores for MbedTEE. APLIC MSI mode.
+
+Config/Make: make mbedtee_qemu_virt_riscv32_imsic_linux_defconfig && make
+
+```
+../qemu/build/qemu-system-riscv32 -M virt -smp 4 -m 2G -device loader,file=output/images/fw_jump.bin,addr=0x86000000,force-raw=on -device loader,file=output/images/Image,addr=0x86400000,force-raw=on -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x86000000,cpu-num=2 -device loader,addr=0x86000000,cpu-num=3 -M aia=aplic-imsic -nographic
+```
+
+### Xiangshan-KMH (REE+TEE）
+
+Run with '-smp 16' RISCV64, 12 cores for LinuxREE, 4 cores for MbedTEE. APLIC MSI mode.
+
+Config/Make: make mbedtee_qemu_xiangshan_kmh_linux_defconfig && make
+
+```
+../qemu/build/qemu-system-riscv64 -M xiangshan-kunminghu -smp 16 -m 8G -device loader,file=output/images/fw_jump.bin,addr=0x86000000,force-raw=on -device loader,file=output/images/Image,addr=0x86200000,force-raw=on -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3  -device loader,addr=0x86000000,cpu-num=4 -device loader,addr=0x86000000,cpu-num=5 -device loader,addr=0x86000000,cpu-num=6 -device loader,addr=0x86000000,cpu-num=7 -device loader,addr=0x86000000,cpu-num=8 -device loader,addr=0x86000000,cpu-num=9 -device loader,addr=0x86000000,cpu-num=10 -device loader,addr=0x86000000,cpu-num=11 -device loader,addr=0x86000000,cpu-num=12 -device loader,addr=0x86000000,cpu-num=13 -device loader,addr=0x86000000,cpu-num=14 -device loader,addr=0x86000000,cpu-num=15 -serial stdio
 ```
 
 
@@ -860,35 +900,37 @@ MbedTEE provide a simple shell which can provide some basic commands to query th
 
   ```
   # irq
-  irq	hwirq	parent	affinity  	total-cnt   	percpu-cnt       controller
-  1	29		nil		f	  		225731      	CPU0: 54433      arm,gic
-  					      						CPU1: 54333      
-  					      						CPU2: 59076      
-  					      						CPU3: 57889      
-  2	2		3		f	  		0           	CPU0: 0          arm,gic,softint
-  					      						CPU1: 0          
-  					     						CPU2: 0          
-  					      						CPU3: 0          
-  3	10		nil		f	  		745         	CPU0: 186        arm,gic
-  					      						CPU1: 178        
-  					      						CPU2: 184        
-  					      						CPU3: 197        
-  4	40		nil		f	  		24          	CPU0: 24         arm,gic
-  					      						CPU1: 0          
-  					      						CPU2: 0          
-  					      						CPU3: 0          
-  5	0(nil)	6		1	  		0          		CPU0: 0          arm,gic,softint
-  					      						CPU1: 0          
-  					     						CPU2: 0          
-  					      						CPU3: 0          
-  6	8(nil)	nil		1	  		0           	CPU0: 0          arm,gic
-  					      						CPU1: 0          
-  					      						CPU2: 0          
-  					      						CPU3: 0          
-  7	15		nil		f	  		138         	CPU0: 135        arm,gic
-  					     						CPU1: 2          
-  					      						CPU2: 0          
-  					      						CPU3: 1   
+  irq     hwirq   parent  childs  enabled affinity  total-cnt   percpu-cnt         controller
+  1       9       root    1       1       f         1513316     CPU00: 476313      riscv,aclint
+                                                                CPU01: 340541      
+                                                                CPU02: 351905      
+                                                                CPU03: 344557      
+  
+  2       5       root    0       1       f         321849      CPU00: 77923       riscv,aclint
+                                                                CPU01: 82682       
+                                                                CPU02: 78224       
+                                                                CPU03: 83020       
+  
+  3       1       root    0       1       f         1696388     CPU00: 494845      riscv,imsic
+                                                                CPU01: 401427      
+                                                                CPU02: 404184      
+                                                                CPU03: 395932      
+  
+  6       12      7       0       1       3         0           CPU00: 0           riscv,aplic
+                                                                CPU01: 0           
+                                                                CPU02: 0           
+                                                                CPU03: 0           
+  
+  7       29      1       1       1       3         204         CPU00: 128         riscv,imsic
+                                                                CPU01: 60          
+                                                                CPU02: 12          
+                                                                CPU03: 4           
+  
+  IPI:   1759276     RPC_CALLEE: 279686      RPC_CALLER: 356419      
+  CPU00: 247037      CPU00:      269297      CPU00:      285497      
+  CPU01: 502732      CPU01:      3452        CPU01:      24715       
+  CPU02: 506899      CPU02:      3721        CPU02:      23772       
+  CPU03: 502608      CPU03:      3216        CPU03:      22435  
   ```
 
 ## Misc
