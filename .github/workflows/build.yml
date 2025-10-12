@@ -166,13 +166,13 @@ jobs:
           name: mbedtee_qemu_sifive_u_riscv32
           path: buildroot/output/images
 
-      - name: Build mbedtee_salix_soc_mips74k
+      - name: Build mbedtee_salix_mips74k
         run: |
-          cd buildroot && make clean && make mbedtee_salix_soc_mips74k_defconfig && make
-      - name: Upload Artifact - mbedtee_salix_soc_mips74k
+          cd buildroot && make clean && make mbedtee_salix_mips74k_defconfig && make
+      - name: Upload Artifact - mbedtee_salix_mips74k
         uses: actions/upload-artifact@v4
         with:
-          name: mbedtee_salix_soc_mips74k
+          name: mbedtee_salix_mips74k
           path: buildroot/output/images
 
       - name: Build mbedtee_qemu_virt_riscv32_imsic_linux
