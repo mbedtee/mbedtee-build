@@ -229,6 +229,15 @@ jobs:
           name: mbedtee_qemu_raspi4b
           path: buildroot/output/images
 
+      - name: Build mbedtee_qemu_microblaze_v_riscv64
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_microblaze_v_riscv64_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_microblaze_v_riscv64
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_microblaze_v_riscv64
+          path: buildroot/output/images
+
       - name: Build mbedtee_qemu_xlnx_versal_virt
         run: |
           cd buildroot && make clean && make mbedtee_qemu_xlnx_versal_virt_defconfig && make
@@ -254,6 +263,15 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mbedtee_qemu_imx7d
+          path: buildroot/output/images
+
+      - name: Build mbedtee_qemu_microblaze_v_riscv32
+        run: |
+          cd buildroot && make clean && make mbedtee_qemu_microblaze_v_riscv32_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_microblaze_v_riscv32
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_microblaze_v_riscv32
           path: buildroot/output/images
 
       - name: Build mbedtee_qemu_virt_riscv64_aplic_linux

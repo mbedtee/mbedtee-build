@@ -133,15 +133,27 @@ cd buildroot && make mbedtee_qemu_virt_aarch64_defconfig && make
 
 ```
 kapa@ubuntu24:~/mbedtee-build/buildroot$ tree configs/ | grep mbedtee_qemu
+├── mbedtee_qemu_ast2600_defconfig
+├── mbedtee_qemu_ast2700_defconfig
+├── mbedtee_qemu_imx7d_defconfig
 ├── mbedtee_qemu_malta_mips32r2_defconfig
+├── mbedtee_qemu_microblaze_v_riscv32_defconfig
+├── mbedtee_qemu_microblaze_v_riscv64_defconfig
+├── mbedtee_qemu_raspi4b_defconfig
 ├── mbedtee_qemu_sifive_u_riscv32_defconfig
 ├── mbedtee_qemu_sifive_u_riscv64_defconfig
 ├── mbedtee_qemu_virt_aarch64_defconfig
 ├── mbedtee_qemu_virt_arm_defconfig
 ├── mbedtee_qemu_virt_riscv32_defconfig
+├── mbedtee_qemu_virt_riscv32_imsic_linux_defconfig
 ├── mbedtee_qemu_virt_riscv32_linux_defconfig
+├── mbedtee_qemu_virt_riscv64_aplic_linux_defconfig
 ├── mbedtee_qemu_virt_riscv64_defconfig
+├── mbedtee_qemu_virt_riscv64_imsic_linux_defconfig
 ├── mbedtee_qemu_virt_riscv64_linux_defconfig
+├── mbedtee_qemu_xiangshan_kmh_linux_defconfig
+├── mbedtee_qemu_xlnx_versal_virt_defconfig
+├── mbedtee_qemu_xlnx_zcu102_defconfig
 ```
 
 ## Prepare the QEMU
@@ -320,7 +332,7 @@ Config/Make: make mbedtee_qemu_ast2700_defconfig && make
 > ```
 
 ```
-../qemu/build/qemu-system-aarch64 -M ast2700-evb -smp 4 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x400000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x415F00000,force-raw=on -device loader,file=output/images/Image,addr=0x420000000,force-raw=on -device loader,addr=0x400000000,cpu-num=0 -device loader,addr=0x400000000,cpu-num=1 -device loader,addr=0x400000000,cpu-num=2 -device loader,addr=0x400000000,cpu-num=3 -serial stdio
+../qemu/build/qemu-system-aarch64 -M ast2700a0-evb -smp 4 -m 2G -device loader,file=output/images/mbedtee.bin,addr=0x400000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x415F00000,force-raw=on -device loader,file=output/images/Image,addr=0x420000000,force-raw=on -device loader,addr=0x400000000,cpu-num=0 -device loader,addr=0x400000000,cpu-num=1 -device loader,addr=0x400000000,cpu-num=2 -device loader,addr=0x400000000,cpu-num=3 -serial stdio
 ```
 
 
@@ -411,7 +423,33 @@ Config/Make: make mbedtee_qemu_xiangshan_kmh_linux_defconfig && make
 ../qemu/build/qemu-system-riscv64 -M xiangshan-kunminghu -smp 16 -m 8G -device loader,file=output/images/fw_jump.bin,addr=0x86000000,force-raw=on -device loader,file=output/images/Image,addr=0x86200000,force-raw=on -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3  -device loader,addr=0x86000000,cpu-num=4 -device loader,addr=0x86000000,cpu-num=5 -device loader,addr=0x86000000,cpu-num=6 -device loader,addr=0x86000000,cpu-num=7 -device loader,addr=0x86000000,cpu-num=8 -device loader,addr=0x86000000,cpu-num=9 -device loader,addr=0x86000000,cpu-num=10 -device loader,addr=0x86000000,cpu-num=11 -device loader,addr=0x86000000,cpu-num=12 -device loader,addr=0x86000000,cpu-num=13 -device loader,addr=0x86000000,cpu-num=14 -device loader,addr=0x86000000,cpu-num=15 -serial stdio
 ```
 
+### Microblaze-V (TEE only）
 
+Run with one RISCV64 or RISCV32 imfac core.
+
+RISCV64: make mbedtee_qemu_microblaze_v_riscv64_defconfig && make
+
+```
+../qemu/build/qemu-system-riscv64 -M amd-microblaze-v-generic -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -serial none -serial stdio
+```
+
+RISCV32: make mbedtee_qemu_microblaze_v_riscv32_defconfig && make
+
+```
+../qemu/build/qemu-system-riscv32 -M amd-microblaze-v-generic -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -serial none -serial stdio
+```
+
+> [!NOTE]
+>
+> If the user needs to run the microblaze-v with MMU (Supervisor/User modes), please select the following mbedtee-os deconfig:
+>
+> qemu_microblaze_v_riscv64_S_defconfig or qemu_microblaze_v_riscv32_S_defconfig
+>
+> ```makefile
+> Modify the microblaze-v-generic.c line-87 in QEMU source tree and rebuild the QEMU. Because the Supervisor EIE is 9 instead of 11.
+> 
+> sysbus_connect_irq(SYS_BUS_DEVICE(dev), 0, qdev_get_gpio_in(DEVICE(cpu), /* 11 */ 9));
+> ```
 
 <div STYLE="page-break-after: always;"></div>
 
