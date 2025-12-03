@@ -12,12 +12,12 @@ For ARM-FastModel::
 	sudo apt-get install xterm
 	Fix the lmutil: sudo ln -s /lib64/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
 
-sudo apt-get install gnome-terminal (since ubuntu26 default is gnome-shell)
+sudo apt-get install gnome-terminal (Default is gnome-shell since ubuntu26)
 
 ## Ubuntu22.04
 
 For Buildroot::
-	sudo apt-get install git make gcc g++ cpio unzip libncurses-dev
+	sudo apt-get install git make gcc g++ bzip2 cpio unzip libncurses-dev
 
 For QEMU::
 	sudo apt-get install python3-pip python3-venv python3-sphinx python3-tomli libglib2.0-dev ninja-build libpixman-1-dev libslirp-dev
@@ -29,7 +29,7 @@ For ARM-FastModel::
 ## Ubuntu20.04
 
 For Buildroot::
-	sudo apt-get install git make gcc g++ cpio unzip libncurses-dev
+	sudo apt-get install git make gcc g++ bzip2 cpio unzip libncurses-dev
 
 For QEMU::  (ubuntu20 must use the **stable-9.0** or older version)
 	sudo apt-get install python3-pip python3-venv python3-sphinx libglib2.0-dev ninja-build libpixman-1-dev libslirp-dev
@@ -80,27 +80,27 @@ gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e
 
 ## Repositories
 
-https://github.com/mbedtee/mbedtee-build.git                                -> entry of building the mbedtee
+https://github.com/mbedtee/mbedtee-build.git                    -> entry of building the mbedtee
 
-https://github.com/mbedtee/mbedtee-docs.git                                 -> documentation of mbedtee
+https://github.com/mbedtee/mbedtee-docs.git                     -> documentation of mbedtee
 
-https://github.com/mbedtee/mbedtee-os.git                                     -> kernel of mbedtee
+https://github.com/mbedtee/mbedtee-os.git                       -> kernel of mbedtee
 
-https://github.com/mbedtee/mbedtee-client-api.git                         -> GlobalPlatform style client API @ Linux REE
+https://github.com/mbedtee/mbedtee-client-api.git               -> GlobalPlatform style client API @ Linux REE
 
-https://github.com/mbedtee/mbedtee-supp.git                                -> REEFS Supplicant System @ Linux UserSpace
+https://github.com/mbedtee/mbedtee-supp.git                     -> REEFS Supplicant System @ Linux UserSpace
 
-https://github.com/mbedtee/mbedtee-crypto.git                             -> Cryptographic algorithms for TA encryption and signing
+https://github.com/mbedtee/mbedtee-crypto.git                   -> Cryptographic algorithms for TA encryption and signing
 
-https://github.com/mbedtee/mbedtee-linux-dts.git                         -> DTS for Linux REE
+https://github.com/mbedtee/mbedtee-linux-dts.git                -> DTS for Linux REE
 
-https://github.com/mbedtee/mbedtee-globalplatform-client.git   -> GlobalPlatform TestSuite client application @ Linux REE
+https://github.com/mbedtee/mbedtee-globalplatform-client.git    -> GlobalPlatform TestSuite client application @ Linux REE
 
-https://github.com/mbedtee/mbedtee-globalplatform-ta.git         -> GlobalPlatform TestSuite TTAs @ MbedTEE
+https://github.com/mbedtee/mbedtee-globalplatform-ta.git        -> GlobalPlatform TestSuite TTAs @ MbedTEE
 
-https://github.com/mbedtee/mbedtee-helloworld-client.git          -> HelloWorld client application @ Linux REE
+https://github.com/mbedtee/mbedtee-helloworld-client.git        -> HelloWorld client application @ Linux REE
 
-https://github.com/mbedtee/mbedtee-helloworld-ta.git                -> HelloWorld TA @ MbedTEE
+https://github.com/mbedtee/mbedtee-helloworld-ta.git            -> HelloWorld TA @ MbedTEE
 
 ## Menuconfig
 

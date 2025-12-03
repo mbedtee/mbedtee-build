@@ -16,6 +16,7 @@ rm -rf buildroot buildroot-${br_version}
 git clone https://gitlab.com/buildroot.org/buildroot.git buildroot-${br_version}
 git -C buildroot-${br_version} checkout ${br_version}
 patch --no-backup-if-mismatch -d buildroot-${br_version} -N -r /dev/null -p1 < ${br_patch}
+find buildroot-${br_version}/tee/ -type f -name "*.sh" -exec chmod +x {} +
 mv buildroot-${br_version} buildroot
 
 ###########################################################
@@ -42,7 +43,7 @@ cd -
 rm -rf qemu
 git clone https://gitlab.com/qemu-project/qemu.git && cd qemu && \
 if [ ! -z `cat /etc/os-release | grep VERSION_ID | grep 20` ]; then git checkout stable-9.0; fi && \
-./configure --prefix=$(pwd)/output --enable-slirp --target-list=mips64el-softmmu,mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu && \
+./configure --prefix=$(pwd)/build --enable-slirp --target-list=mips64el-softmmu,mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu && \
 make -j8 && make install
 cd -
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+BR_DIR="${1:-buildroot}"
+
 br_patch=`ls *.patch --sort=time | head -n 1`
 
 if [ -z "$br_patch" ]; then
@@ -9,7 +11,7 @@ fi
 
 version=$(basename $br_patch .patch)
 
-rm -rf buildroot buildroot-${version}
+rm -rf ${BR_DIR} buildroot-${version}
 
 export GIT_SSL_NO_VERIFY=1
 
@@ -19,4 +21,6 @@ git -C buildroot-${version} checkout ${version}
 
 patch --no-backup-if-mismatch -d buildroot-${version} -N -r /dev/null -p1 < $br_patch
 
-mv buildroot-${version} buildroot
+find buildroot-${version}/tee/ -type f -name "*.sh" -exec chmod +x {} +
+
+mv buildroot-${version} ${BR_DIR}
