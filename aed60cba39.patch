@@ -123,7 +123,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -159,7 +159,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -195,7 +195,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -244,7 +244,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -279,7 +279,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -315,7 +315,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -367,7 +367,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -416,7 +416,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -463,7 +463,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -506,16 +506,12 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_qemu_malta_mips32r2_defconfig buildroot/configs/mbedtee_qemu_malta_mips32r2_defconfig
 --- buildroot-ori/configs/mbedtee_qemu_malta_mips32r2_defconfig
 +++ buildroot/configs/mbedtee_qemu_malta_mips32r2_defconfig
-@@ -0,0 +1,35 @@
+@@ -0,0 +1,31 @@
 +BR2_mipsel=y
-+BR2_mips_32r2=y
-+BR2_TOOLCHAIN_BUILDROOT_UCLIBC=y
-+BR2_KERNEL_HEADERS_6_6=y
-+BR2_TOOLCHAIN_BUILDROOT_USE_SSP=y
-+# BR2_UCLIBC_INSTALL_UTILS is not set
-+BR2_GCC_VERSION_14_X=y
-+BR2_TOOLCHAIN_BUILDROOT_CXX=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++# BR2_MIPS_SOFT_FLOAT is not set
++BR2_TOOLCHAIN_EXTERNAL=y
++BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_MIPS32EL_UCLIBC_STABLE=y
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -550,7 +546,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -583,7 +579,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -618,7 +614,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -663,7 +659,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -698,7 +694,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -736,7 +732,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -782,7 +778,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -830,7 +826,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -880,7 +876,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -929,7 +925,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -965,7 +961,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_RISCV_32=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV32_ILP32D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1014,7 +1010,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1049,7 +1045,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1084,7 +1080,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1133,7 +1129,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1168,7 +1164,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_riscv=y
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_RISCV64_LP64D_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1219,7 +1215,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1265,7 +1261,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1305,19 +1301,17 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/configs/mbedtee_salix_mips74k_defconfig buildroot/configs/mbedtee_salix_mips74k_defconfig
 --- buildroot-ori/configs/mbedtee_salix_mips74k_defconfig
 +++ buildroot/configs/mbedtee_salix_mips74k_defconfig
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,31 @@
 +BR2_mipsel=y
-+BR2_mips_32r2=y
-+BR2_KERNEL_HEADERS_6_6=y
-+BR2_GCC_VERSION_14_X=y
-+BR2_TOOLCHAIN_BUILDROOT_CXX=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++# BR2_MIPS_SOFT_FLOAT is not set
++BR2_TOOLCHAIN_EXTERNAL=y
++BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_MIPS32EL_UCLIBC_STABLE=y
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
 +BR2_OPTIMIZE_1=y
 +BR2_RELRO_NONE=y
-+BR2_FORTIFY_SOURCE_NONE=y
 +BR2_TARGET_GENERIC_HOSTNAME="mips32r2"
 +BR2_TARGET_GENERIC_ISSUE="runs on mips74k"
 +BR2_INIT_NONE=y
@@ -1349,7 +1343,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1399,7 +1393,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1448,7 +1442,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1493,7 +1487,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1542,7 +1536,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_ARMV7_EABIHF_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1591,7 +1585,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1637,7 +1631,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -1683,7 +1677,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_TOOLCHAIN_EXTERNAL=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN=y
 +BR2_TOOLCHAIN_EXTERNAL_BOOTLIN_AARCH64_GLIBC_STABLE=y
-+BR2_WGET="wget --passive-ftp -nd -t 3 --no-check-certificate"
++BR2_WGET="wget --passive-ftp -nd -t 8 --no-check-certificate"
 +BR2_BACKUP_SITE="http://sources.buildroot.net"
 +BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
 +BR2_CPAN_MIRROR="http://cpan.metacpan.org"
@@ -13927,15 +13921,22 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/Config.in buildroot/tee/mbedtee/Config.in
 --- buildroot-ori/tee/mbedtee/Config.in
 +++ buildroot/tee/mbedtee/Config.in
-@@ -0,0 +1,25 @@
+@@ -0,0 +1,32 @@
 +config BR2_PACKAGE_MBEDTEE
 +	bool "mbedtee packages"
++	select BR2_PACKAGE_MBEDTEE_CRYPTO
++	select BR2_TOOLCHAIN_MBEDTEE_ARM if BR2_arm
++	select BR2_TOOLCHAIN_MBEDTEE_AARCH64 if BR2_aarch64
++	select BR2_TOOLCHAIN_MBEDTEE_RISCV32 if BR2_RISCV_32
++	select BR2_TOOLCHAIN_MBEDTEE_RISCV64 if BR2_RISCV_64
++	select BR2_TOOLCHAIN_MBEDTEE_MIPS if BR2_MIPS_CPU_MIPS32
 +	help
-+	  enable mbedtee system support
++	  enable mbedtee system 
 +
 +if BR2_PACKAGE_MBEDTEE
 +
 +source "tee/mbedtee/mbedtee-os/Config.in"
++
 +source "tee/mbedtee/mbedtee-supp/Config.in"
 +
 +source "tee/mbedtee/mbedtee-crypto/Config.in"
@@ -14183,15 +14184,9 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-os/Config.in buildroot/tee/mbedtee/mbedtee-os/Config.in
 --- buildroot-ori/tee/mbedtee/mbedtee-os/Config.in
 +++ buildroot/tee/mbedtee/mbedtee-os/Config.in
-@@ -0,0 +1,10 @@
+@@ -0,0 +1,4 @@
 +config BR2_PACKAGE_MBEDTEE_OS
 +	bool "mbedtee OS"
-+	select BR2_PACKAGE_MBEDTEE_CRYPTO
-+	select BR2_TOOLCHAIN_MBEDTEE_ARM if BR2_ARM_CPU_ARMV7A
-+	select BR2_TOOLCHAIN_MBEDTEE_AARCH64 if BR2_ARM_CPU_ARMV8A
-+	select BR2_TOOLCHAIN_MBEDTEE_RISCV32 if BR2_RISCV_32
-+	select BR2_TOOLCHAIN_MBEDTEE_RISCV64 if BR2_RISCV_64
-+	select BR2_TOOLCHAIN_MBEDTEE_MIPS if BR2_MIPS_CPU_MIPS32R2
 +	help
 +	  with mbedtee system support
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/mbedtee/mbedtee-os/mbedtee-os.mk buildroot/tee/mbedtee/mbedtee-os/mbedtee-os.mk
@@ -14587,14 +14582,13 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/Config.in buildroot/toolchain/toolchain-mbedtee-aarch64/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/Config.in
 +++ buildroot/toolchain/toolchain-mbedtee-aarch64/Config.in
-@@ -0,0 +1,7 @@
+@@ -0,0 +1,6 @@
 +config BR2_TOOLCHAIN_MBEDTEE_AARCH64
-+	bool "mbedtee toolchain"
++	bool "MbedTEE Toolchain"
 +	depends on BR2_aarch64
-+	depends on BR2_ARM_CPU_ARMV8A
++	depends on BR2_ARM_CPU_ARMV8A || BR2_ARM_CPU_ARMV9A
 +	help
-+	  armv8-a cross-toolchain with GCC
-+
++	  AArch64 Prebuilt Toolchain with GCC
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.hash buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.hash
 +++ buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.hash
@@ -14638,14 +14632,13 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/Config.in buildroot/toolchain/toolchain-mbedtee-arm/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/Config.in
 +++ buildroot/toolchain/toolchain-mbedtee-arm/Config.in
-@@ -0,0 +1,7 @@
+@@ -0,0 +1,6 @@
 +config BR2_TOOLCHAIN_MBEDTEE_ARM
 +	bool "MbedTEE Toolchain"
 +	depends on BR2_arm
 +	depends on BR2_ARM_CPU_ARMV7A
 +	help
-+	  ARMv7-A Tollchain with GCC
-+
++	  AArch32 Prebuilt Toolchain with GCC
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.hash buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.hash
 +++ buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.hash
@@ -14689,13 +14682,12 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/Config.in buildroot/toolchain/toolchain-mbedtee-mips/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/Config.in
 +++ buildroot/toolchain/toolchain-mbedtee-mips/Config.in
-@@ -0,0 +1,6 @@
+@@ -0,0 +1,5 @@
 +config BR2_TOOLCHAIN_MBEDTEE_MIPS
-+	bool "mbedtee MIPS32 Toolchain"
++	bool "MbedTEE Toolchain"
 +	depends on BR2_mipsel
 +	help
-+	  MIPS32 Tollchain with GCC
-+
++	  MIPS32 Prebuilt Toolchain with GCC
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.hash buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.hash
 +++ buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.hash
@@ -14739,13 +14731,12 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/Config.in buildroot/toolchain/toolchain-mbedtee-riscv32/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/Config.in
 +++ buildroot/toolchain/toolchain-mbedtee-riscv32/Config.in
-@@ -0,0 +1,6 @@
+@@ -0,0 +1,5 @@
 +config BR2_TOOLCHAIN_MBEDTEE_RISCV32
-+	bool "mbedtee riscv32 toolchain"
++	bool "MbedTEE Toolchain"
 +	depends on BR2_riscv && BR2_RISCV_32
 +	help
-+	  RISCV32 Toolchain with GCC
-+
++	  RISCV32 Prebuilt Toolchain with GCC
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.hash buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.hash
 +++ buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.hash
@@ -14789,13 +14780,12 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/Config.in buildroot/toolchain/toolchain-mbedtee-riscv64/Config.in
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/Config.in
 +++ buildroot/toolchain/toolchain-mbedtee-riscv64/Config.in
-@@ -0,0 +1,6 @@
+@@ -0,0 +1,5 @@
 +config BR2_TOOLCHAIN_MBEDTEE_RISCV64
-+	bool "mbedtee riscv64 toolchain"
++	bool "MbedTEE Toolchain"
 +	depends on BR2_riscv && BR2_RISCV_64
 +	help
-+	  RISCV64 Toolchain with GCC
-+
++	  RISCV64 Prebuilt Toolchain with GCC
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.hash buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.hash
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.hash
 +++ buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.hash
