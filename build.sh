@@ -28,9 +28,9 @@ if [ "$1" == "aarch64" ]; then
 elif [ "$1" == "aarch32" ]; then
 	br_defconfig=mbedtee_qemu_virt_arm_defconfig
 elif [ "$1" == "riscv64" ]; then
-	br_defconfig=mbedtee_qemu_virt_riscv64_linux_defconfig
+	br_defconfig=mbedtee_qemu_virt_riscv64_imsic_linux_defconfig
 elif [ "$1" == "riscv32" ]; then
-	br_defconfig=mbedtee_qemu_virt_riscv32_linux_defconfig
+	br_defconfig=mbedtee_qemu_virt_riscv32_imsic_linux_defconfig
 elif [ "$1" == "mips32" ]; then
 	br_defconfig=mbedtee_qemu_malta_mips32r2_defconfig
 fi
@@ -52,7 +52,7 @@ cd -
 ###########################################################
 if [ "$2" == "run" ]; then
 	if [ "$1" == "aarch64" ]; then
-		gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& qemu/build/qemu-system-aarch64 -M virt -M secure=on,gic-version=3,virtualization=on -cpu cortex-a710 -smp 4 -m 2048 -device loader,file=buildroot/output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=buildroot/output/images/linux.dtb,addr=0x85F00000,force-raw=on -device loader,file=buildroot/output/images/Image,addr=0x86000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
+		gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& qemu/build/qemu-system-aarch64 -M virt -M secure=on,gic-version=3,virtualization=on -cpu cortex-a710 -smp 4 -m 4096 -device loader,file=buildroot/output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=buildroot/output/images/linux.dtb,addr=0x85F00000,force-raw=on -device loader,file=buildroot/output/images/Image,addr=0x86000000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
 	elif [ "$1" == "aarch32" ]; then
 		gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& qemu/build/qemu-system-arm -M virt -M secure=on -cpu cortex-a15 -smp 4 -m 2048 -device loader,file=buildroot/output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=buildroot/output/images/linux.dtb,addr=0x85F00000,force-raw=on -device loader,file=buildroot/output/images/Image,addr=0x86008000,force-raw=on -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
 	elif [ "$1" == "riscv64" ]; then

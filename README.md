@@ -12,7 +12,8 @@ For ARM-FastModel::
 	sudo apt-get install xterm
 	Fix the lmutil: sudo ln -s /lib64/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
 
-sudo apt-get install gnome-terminal (Default is gnome-shell since ubuntu26)
+For Terminal::
+	sudo apt-get install gnome-terminal (Default is gnome-shell since ubuntu26)
 
 ## Ubuntu22.04
 
@@ -26,17 +27,23 @@ For ARM-FastModel::
 	sudo apt-get install xterm
 	Fix the lmutil: sudo ln -s /lib64/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
 
+For Terminal::
+	sudo apt-get install gnome-terminal
+
 ## Ubuntu20.04
 
 For Buildroot::
 	sudo apt-get install git make gcc g++ bzip2 cpio unzip libncurses-dev
 
-For QEMU::  (ubuntu20 must use the **stable-9.0** or older version)
+For QEMU:: (ubuntu20 must use the **stable-9.0** or older version)
 	sudo apt-get install python3-pip python3-venv python3-sphinx libglib2.0-dev ninja-build libpixman-1-dev libslirp-dev
 
 For ARM-FastModel::
 	sudo apt-get install xterm
 	Fix the lmutil: sudo ln -s /lib64/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
+
+For Terminal::
+	sudo apt-get install gnome-terminal
 
 <div STYLE="page-break-after: always;"></div>
 
@@ -66,7 +73,7 @@ cd mbedtee-build && ./build.sh aarch64 run
 
   <img src="media-quickstart/sshot-example.png" style="zoom:100%"/>
 
-- Following example command is for **run only**, xterm is also an alternative terminal and can be launched in the similar options.
+- Following example command is for **run only**, xterm is also an alternative terminal and can be launched with similar options.
 
 - If your system does not have gnome-terminal and xterm, please directly run the qemu-system-xxx command and telnet to the corresponding port to use the REE/TEE terminal.
 
@@ -104,7 +111,7 @@ https://github.com/mbedtee/mbedtee-helloworld-ta.git            -> HelloWorld TA
 
 ## Menuconfig
 
-MbedTEE  provides the menuconfig for the feature configuration.
+MbedTEE provides the menuconfig for the feature configuration.
 
 Enter the **buildroot** folder (**mbedtee-build/buildroot**), and issue the command **`make mbedtee-os-menuconfig`**
 
@@ -219,9 +226,9 @@ xterm -geometry 128x32 -e "telnet localhost 5556" & xterm -geometry 128x32 -e "t
 
 ### AArch32 (REE+TEE)
 
-There are two kinds of QEMU platforms could run the ARM AArch32, one is "-M virt", another one is "-M vexpress-a15".
+This section covers two common QEMU platforms for ARM AArch32: "-M virt" and "-M vexpress-a15". Additional AArch32 platforms (AST2600, imx7d, etc.) are documented in later sections.
 
-QEMU virt AArch32 targets: -M virt -cpu cortex-a15 or cortex-a7
+**QEMU virt AArch32 targets**: -M virt -cpu cortex-a15 or cortex-a7
 
 Config/Make: make clean && make mbedtee_qemu_virt_arm_defconfig && make
 
@@ -229,7 +236,7 @@ Config/Make: make clean && make mbedtee_qemu_virt_arm_defconfig && make
 gnome-terminal -e "telnet 127.0.0.1 5555" --tab -t "LinuxREE"& gnome-terminal -e "telnet 127.0.0.1 5556" --tab -t "MbedTEE"& ../qemu/build/qemu-system-arm -M virt -M secure=on -cpu cortex-a15 -smp 4 -m 2048 -device loader,file=output/images/mbedtee.bin,addr=0x80000000,force-raw=on -device loader,file=output/images/linux.dtb,addr=0x85F00000,force-raw=on -device loader,file=output/images/Image,addr=0x86008000,force-raw=on  -device loader,addr=0x80000000,cpu-num=0 -device loader,addr=0x80000000,cpu-num=1 -device loader,addr=0x80000000,cpu-num=2 -device loader,addr=0x80000000,cpu-num=3 -serial telnet::5555,server,nowait -serial telnet::5556,server,nowait
 ```
 
-QEMU vexpress AArch32 target: -M vexpress-a15 -cpu cortex-a15
+**QEMU vexpress AArch32 target**: -M vexpress-a15 -cpu cortex-a15
 
 Config/Make: make clean && make mbedtee_vexpress_ca15_defconfig && make
 
@@ -569,7 +576,7 @@ RISCV32: make clean && make mbedtee_qemu_microblaze_v_riscv32_defconfig && make
 >
 > ```makefile
 > Modify the microblaze-v-generic.c line-88 in QEMU source tree and rebuild the QEMU. Because the Supervisor EIE is 9 instead of 11.
-> 
+>
 > sysbus_connect_irq(SYS_BUS_DEVICE(dev), 0, qdev_get_gpio_in(DEVICE(cpu), /* 11 */ 9));
 > ```
 
@@ -610,7 +617,7 @@ kapa@ubuntu24:~/mbedtee-build/buildroot$ tree configs/ | grep mbedtee_vexpress
 
 ## Prepare the FastModel
 
-1. Before setup the LicenseManager and FastModel SystemCanvas, please get a Fast Model Library license from support@arm.com, then generate your **license.dat** from below website.
+1. Before setting up the LicenseManager and FastModel SystemCanvas, please get a Fast Model Library license from support@arm.com, then generate your **license.dat** from below website.
 
    https://developer.arm.com/support/licensing/generate
 
@@ -632,7 +639,7 @@ kapa@ubuntu24:~/mbedtee-build/buildroot$ tree configs/ | grep mbedtee_vexpress
 
    Make sure the Ubuntu MAC and the name of the account currently logged on are consistent with the MAC/Name used for generating license.dat.
 
-   When success, you will see the log: **(armlmd) DPLT: waiting for logger to connect**
+   When successful, you will see the log: **(armlmd) DPLT: waiting for logger to connect**
 
 5. Setup the "Fast Models 11.23 for Linux x86"
 
@@ -641,7 +648,7 @@ kapa@ubuntu24:~/mbedtee-build/buildroot$ tree configs/ | grep mbedtee_vexpress
    ./FastModels_11-23-009_Linux64/setup.bin
    ```
 
-   Specify the installation directory and the location of the license.dat, then next util finish.
+   Specify the installation directory and the location of the license.dat, then click Next until finished.
 
    <img src="media-quickstart/sshot-fastmodel.png" style="zoom:80%"/>
 
@@ -902,7 +909,7 @@ Applicable to platforms that run Linux (REE) alongside MbedTEE -- e.g. AArch32, 
 mbedtee-gp-client -r 1
 ```
 
-`-r 1` runs one complete round of all 2218 GlobalPlatform test cases. **Pass criterion**: All cases complete with no failure message and no crash.
+`-r 1` runs one complete round of all 2350 GlobalPlatform test cases. **Pass criterion**: All cases complete with no failure message and no crash.
 
 > [!NOTE]
 >
@@ -912,7 +919,7 @@ mbedtee-gp-client -r 1
 
 # GlobalPlatform
 
-MbedTEE GlobalPlatform TestSuite is porting from **TEE_Initial_Configuration-Test_Suite_v2_0_0_2-2017_06_09.7z**,and it's put in two git repositories, one is for REE client, another one is for TEE TTAs:
+MbedTEE GlobalPlatform TestSuite is ported from **TEE_Initial_Configuration-Test_Suite_v2_0_0_2-2017_06_09.7z**, and it is placed in two git repositories, one is for REE client, another one is for TEE TTAs:
 
 ```
 https://github.com/mbedtee/mbedtee-globalplatform-client.git
@@ -921,13 +928,13 @@ https://github.com/mbedtee/mbedtee-globalplatform-ta.git
 
 If you are a member of GlobalPlatform or you have purchased the TEE_Initial_Configuration-Test_Suite, you can email the author to request access to these two git repositories.
 
-The GlobalPlatform TestSuite can be enabled through buildroot menuconfig, buildroot clones them from above repositories and then build them:
+The GlobalPlatform TestSuite can be enabled through buildroot menuconfig, buildroot clones them from the above repositories and then builds them:
 
 **make menuconfig** -> Enter the "**TEE**" menu -> Select the "**mbedtee GlobalPlatform client**" and "**mbedtee GlobalPlatform TA**" -> **make all**
 
 ![](media-quickstart/sshot-enable-gptest.png)
 
-After successfully made the GlobalPlatform TestSuite, you can run the test via **mbedtee-gp-client** application at  LinuxREE terminal:
+After successfully building the GlobalPlatform TestSuite, you can run the test via **mbedtee-gp-client** application at LinuxREE terminal:
 
 ```
 # mbedtee-gp-client -h
@@ -955,7 +962,7 @@ In general, you can add your own trusted applications by referencing the **mbedt
 
 - Top level Makefile @ buildroot - mbedtee-helloworld-ta.mk:
 
-  - specifies the cross-toolchain and architectured compile options
+  - specifies the cross-toolchain and architecture-specific compile options
 
   - encrypts and signs the compiled TA ELF object
 
@@ -972,9 +979,26 @@ In general, you can add your own trusted applications by referencing the **mbedt
 
   - compile the TA ELF object
 
-  - the whole certificate and ELF image are encrypted with AES-128-CBC-CTS (CTS = CBC-CS3) with multi-level keys
+  - Protocol V2: the TA ELF is encrypted and signed using the **mbedtee-crypto** tool with selectable algorithms:
 
-  - the certificate and image are signed with RSA-2048 SHA256 [PKCS#1_V1.5], the signature is located at the end of file
+    - **Signature algorithms** (RSA-PSS, ECDSA, Ed25519):
+      - `rsa2048-pss-sha256`, `rsa3072-pss-sha256`, `rsa3072-pss-sha384`,
+        `rsa4096-pss-sha256`, `rsa4096-pss-sha384`, `rsa4096-pss-sha512`
+      - `ecdsa-p256-sha256`, `ecdsa-p384-sha384`, `ecdsa-p521-sha512`
+      - `ecdsa-bp256-sha256`, `ecdsa-bp384-sha384`, `ecdsa-bp512-sha512` (Brainpool curves)
+      - `ed25519`
+
+    - **Encryption algorithms** (AEAD):
+      - `aes-256-gcm`, `sm4-gcm`, `chacha20-poly1305`
+
+  - The signing/encryption flow (`auth_ta` uses **verify-then-decrypt**):
+    1. Verify the TA object's signature using the public key embedded in the certificate
+    2. AEAD decrypt the TA body (authenticated decryption with integrity check via GCM/Poly1305 tag)
+    3. Install the decrypted TA ELF and set its configuration
+
+  - Two output files are generated by `mbedtee-crypto`:
+    - `.certi` - certificate containing public key, encrypted symmetric key, TA config, and its own signature
+    - `.o` - TA object: `ta_obj_header` + AEAD-encrypted ELF body + signature over (header || encrypted body)
 
     ```
     kapa@ubuntu24:~/mbedtee-build/buildroot$ tree dl/mbedtee-helloworld-ta/git
@@ -984,7 +1008,7 @@ In general, you can add your own trusted applications by referencing the **mbedt
     |-- mbedtee-helloworld-ta.c
     |-- mbedtee-helloworld-ta.config
     `-- README.md
-    
+
     `-- signed
       |-- mbedtee-helloworld-ta.certi
       `-- mbedtee-helloworld-ta.o
@@ -1009,7 +1033,7 @@ In general, you can add your own trusted applications by referencing the **mbedt
 
   > [!IMPORTANT]
   >
-  > The MbedTEE ELF loader needs the **.symtab and .strtab** sections to locate the GlobalPlatform specified TA entries, such as (*TA_CreateEntryPoint/TA_DestroyEntryPoint/TA_OpenSessionEntryPoint/TA_CloseSessionEntryPoint/TA_InvokeCommandEntryPoint*), so please DO NOT strip these two sections in the complied TA ELF object, usually you can refer to the method in Makefile@mbedtee-helloworld-ta:
+  > The MbedTEE ELF loader needs the **.symtab and .strtab** sections to locate the GlobalPlatform specified TA entries, such as (*TA_CreateEntryPoint/TA_DestroyEntryPoint/TA_OpenSessionEntryPoint/TA_CloseSessionEntryPoint/TA_InvokeCommandEntryPoint*), so please DO NOT strip these two sections in the compiled TA ELF object, usually you can refer to the method in Makefile@mbedtee-helloworld-ta:
   >
   > **${STRIP} -d -R .comment ${APP}**  ## this strip option removes the unnecessary sections and keeps the **.symtab and .strtab** sections.
 
@@ -1077,9 +1101,9 @@ x[28~29] 000000000000000a ffffffbfc024fbd0
 
 ## Shell
 
-MbedTEE provide a simple shell which can provide some basic commands to query the system information:
+MbedTEE provides a simple shell which can provide some basic commands to query the system information:
 
-- ps/ls/mem/rm/kill/irq/date/mount etc..
+- ps/ls/mem/rm/kill/irq/date/mount etc.
 
   ![sshot-ps](media-quickstart/sshot-ps.png)
 
@@ -1087,15 +1111,15 @@ MbedTEE provide a simple shell which can provide some basic commands to query th
   # mem
   Buddy  Pools: 000009, Free 0x00001480 SingleAllocMax: 0x400
   Bitmap Pools: 000008, Free 0x00003c60 SingleAllocMax: 0xfc0
-  
+
   page pool 0 info: size 0x10000000
   page phys: 0x40000000, va: 0xffffffbfc0000000
   page cnt: 65050/65536 (singleAllocMax: 32768)
-  
+
   page pool 1 info: size 0x5572000
   page phys: 0x8028e000, va: 0xffffffc00028e000
   page cnt: 21836/21874 (singleAllocMax: 16384)
-  
+
   kvma info: size 2000000000, va: 0xffffff9f80000000
   l 0 Start 0xffffff9f80000000 Size 80000, Free 3d000, MaxOrder 17
   l 1 Start 0xffffff9f80000000 Size 4000000, Free 3c80000, MaxOrder 25
@@ -1110,27 +1134,27 @@ MbedTEE provide a simple shell which can provide some basic commands to query th
                                                                 CPU01: 340541
                                                                 CPU02: 351905
                                                                 CPU03: 344557
-  
+
   2       5       root    0       1       f         321849      CPU00: 77923       riscv,aclint
                                                                 CPU01: 82682
                                                                 CPU02: 78224
                                                                 CPU03: 83020
-  
+
   3       1       root    0       1       f         1696388     CPU00: 494845      riscv,imsic
                                                                 CPU01: 401427
                                                                 CPU02: 404184
                                                                 CPU03: 395932
-  
+
   6       12      7       0       1       3         0           CPU00: 0           riscv,aplic
                                                                 CPU01: 0
                                                                 CPU02: 0
                                                                 CPU03: 0
-  
+
   7       29      1       1       1       3         204         CPU00: 128         riscv,imsic
                                                                 CPU01: 60
                                                                 CPU02: 12
                                                                 CPU03: 4
-  
+
   IPI:   1759276     RPC_CALLEE: 279686      RPC_CALLER: 356419
   CPU00: 247037      CPU00:      269297      CPU00:      285497
   CPU01: 502732      CPU01:      3452        CPU01:      24715
@@ -1143,4 +1167,4 @@ MbedTEE provide a simple shell which can provide some basic commands to query th
 - ASLR is enabled by default; it is better to disable it through **[menuconfig](#menuconfig)** if you are debugging issues related to memory faults.
 - The default trace level of kernel is TRACE_LEVEL_INFO, you can change the CONFIG_TRACE_LEVEL through **[menuconfig](#menuconfig)**.
 - The default trace level of user is TRACE_LEVEL_ERROR, you can change it in **utrace.h**.
-- The default layout of address spaces is defined in **map.h**, you can check and change them if needed.
+- The default layout of address spaces is defined in the architecture-specific **map.h** (e.g. `arch/arm/aarch64/include/map.h`), you can check and change them if needed.
