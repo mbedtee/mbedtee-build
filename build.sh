@@ -42,8 +42,8 @@ cd -
 ###########################################################
 rm -rf qemu
 git clone https://gitlab.com/qemu-project/qemu.git && cd qemu && \
-if [ ! -z `cat /etc/os-release | grep VERSION_ID | grep 20` ]; then git checkout stable-9.0; fi && \
-./configure --prefix=$(pwd)/build --enable-slirp --target-list=mips64el-softmmu,mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu && \
+if [ ! -z `cat /etc/os-release | grep VERSION_ID | grep 20` ]; then git checkout stable-9.0; else git checkout stable-11.0; fi && \
+./configure --prefix=$(pwd)/build --enable-slirp --target-list=mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu && \
 make -j8 && make install
 cd -
 

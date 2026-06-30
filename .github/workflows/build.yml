@@ -10,14 +10,13 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron:  '00 5,18 * * *'
+    - cron:  '00 21 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  # Job A: vexpress + mips platforms (smaller buildroot clone)
-  build-vexpress-mips:
+  build-job1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,15 +41,6 @@ jobs:
           name: mbedtee_vexpress_ca15
           path: buildroot-vexpress-mips/output/images
 
-      - name: Build mbedtee_vexpress_ca510x4_ca710x4
-        run: |
-          cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca510x4_ca710x4_defconfig && make
-      - name: Upload Artifact - mbedtee_vexpress_ca510x4_ca710x4
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_vexpress_ca510x4_ca710x4
-          path: buildroot-vexpress-mips/output/images
-
       - name: Build mbedtee_vexpress_ca5
         run: |
           cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca5_defconfig && make
@@ -58,24 +48,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mbedtee_vexpress_ca5
-          path: buildroot-vexpress-mips/output/images
-
-      - name: Build mbedtee_vexpress_ca65
-        run: |
-          cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca65_defconfig && make
-      - name: Upload Artifact - mbedtee_vexpress_ca65
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_vexpress_ca65
-          path: buildroot-vexpress-mips/output/images
-
-      - name: Build mbedtee_vexpress_ca17x4_ca7x4
-        run: |
-          cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca17x4_ca7x4_defconfig && make
-      - name: Upload Artifact - mbedtee_vexpress_ca17x4_ca7x4
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_vexpress_ca17x4_ca7x4
           path: buildroot-vexpress-mips/output/images
 
       - name: Build mbedtee_vexpress_ca53
@@ -87,6 +59,33 @@ jobs:
           name: mbedtee_vexpress_ca53
           path: buildroot-vexpress-mips/output/images
 
+      - name: Build mbedtee_vexpress_ca65
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca65_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca65
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca65
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_vexpress_ca510x4_ca710x4
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca510x4_ca710x4_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca510x4_ca710x4
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca510x4_ca710x4
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_vexpress_ca17x4_ca7x4
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca17x4_ca7x4_defconfig && make
+      - name: Upload Artifact - mbedtee_vexpress_ca17x4_ca7x4
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_vexpress_ca17x4_ca7x4
+          path: buildroot-vexpress-mips/output/images
+
       - name: Build mbedtee_vexpress_ca73x4_ca53x4
         run: |
           cd buildroot-vexpress-mips && make clean && make mbedtee_vexpress_ca73x4_ca53x4_defconfig && make
@@ -96,26 +95,106 @@ jobs:
           name: mbedtee_vexpress_ca73x4_ca53x4
           path: buildroot-vexpress-mips/output/images
 
-      - name: Build mbedtee_salix_mips74k
+      - name: Build mbedtee_qemu_ast2600
         run: |
-          cd buildroot-vexpress-mips && make clean && make mbedtee_salix_mips74k_defconfig && make
-      - name: Upload Artifact - mbedtee_salix_mips74k
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_ast2600_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_ast2600
         uses: actions/upload-artifact@v4
         with:
-          name: mbedtee_salix_mips74k
+          name: mbedtee_qemu_ast2600
           path: buildroot-vexpress-mips/output/images
 
-      - name: Build mbedtee_qemu_malta_mips32r2
+      - name: Build mbedtee_qemu_ast2700
         run: |
-          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_malta_mips32r2_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_malta_mips32r2
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_ast2700_defconfig && make CONFIG_ARCH_ASPEED=y
+      - name: Upload Artifact - mbedtee_qemu_ast2700
         uses: actions/upload-artifact@v4
         with:
-          name: mbedtee_qemu_malta_mips32r2
+          name: mbedtee_qemu_ast2700
           path: buildroot-vexpress-mips/output/images
 
-  # Job B: all other platforms
-  build-others:
+      - name: Build mbedtee_qemu_microblaze_v_riscv32
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_microblaze_v_riscv32_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_microblaze_v_riscv32
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_microblaze_v_riscv32
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv64_aplic
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_virt_riscv64_aplic_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_aplic
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv64_aplic
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_virt_riscv64_thead_c906
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_virt_riscv64_thead_c906_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_thead_c906
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_virt_riscv64_thead_c906
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_andes_ae350_riscv32
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_andes_ae350_riscv32_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv32
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_andes_ae350_riscv32
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_andes_ae350_riscv32_imsic
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_andes_ae350_riscv32_imsic_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv32_imsic
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_andes_ae350_riscv32_imsic
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_andes_ae350_riscv32_imsic_linux
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_andes_ae350_riscv32_imsic_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv32_imsic_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_andes_ae350_riscv32_imsic_linux
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_andes_ae350_riscv64
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_andes_ae350_riscv64_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv64
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_andes_ae350_riscv64
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_andes_ae350_riscv64_imsic
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_andes_ae350_riscv64_imsic_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv64_imsic
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_andes_ae350_riscv64_imsic
+          path: buildroot-vexpress-mips/output/images
+
+      - name: Build mbedtee_qemu_andes_ae350_riscv64_imsic_linux
+        run: |
+          cd buildroot-vexpress-mips && make clean && make mbedtee_qemu_andes_ae350_riscv64_imsic_linux_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv64_imsic_linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: mbedtee_qemu_andes_ae350_riscv64_imsic_linux
+          path: buildroot-vexpress-mips/output/images
+
+  build-job2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -221,22 +300,22 @@ jobs:
           name: mbedtee_qemu_virt_riscv32
           path: buildroot/output/images
 
-      - name: Build mbedtee_qemu_ast2600
+      - name: Build mbedtee_salix_mips74k
         run: |
-          cd buildroot && make clean && make mbedtee_qemu_ast2600_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_ast2600
+          cd buildroot && make clean && make mbedtee_salix_mips74k_defconfig && make
+      - name: Upload Artifact - mbedtee_salix_mips74k
         uses: actions/upload-artifact@v4
         with:
-          name: mbedtee_qemu_ast2600
+          name: mbedtee_salix_mips74k
           path: buildroot/output/images
 
-      - name: Build mbedtee_qemu_ast2700
+      - name: Build mbedtee_qemu_malta_mips32r2
         run: |
-          cd buildroot && make clean && make mbedtee_qemu_ast2700_defconfig && make CONFIG_ARCH_ASPEED=y
-      - name: Upload Artifact - mbedtee_qemu_ast2700
+          cd buildroot && make clean && make mbedtee_qemu_malta_mips32r2_defconfig && make
+      - name: Upload Artifact - mbedtee_qemu_malta_mips32r2
         uses: actions/upload-artifact@v4
         with:
-          name: mbedtee_qemu_ast2700
+          name: mbedtee_qemu_malta_mips32r2
           path: buildroot/output/images
 
       - name: Build mbedtee_qemu_raspi4b
@@ -284,83 +363,4 @@ jobs:
           name: mbedtee_qemu_imx7d
           path: buildroot/output/images
 
-      - name: Build mbedtee_qemu_microblaze_v_riscv32
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_microblaze_v_riscv32_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_microblaze_v_riscv32
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_microblaze_v_riscv32
-          path: buildroot/output/images
 
-      - name: Build mbedtee_qemu_virt_riscv64_aplic
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_virt_riscv64_aplic_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_aplic
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_virt_riscv64_aplic
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_virt_riscv64_thead_c906
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_virt_riscv64_thead_c906_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_virt_riscv64_thead_c906
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_virt_riscv64_thead_c906
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_andes_ae350_riscv32
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_andes_ae350_riscv32_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv32
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_andes_ae350_riscv32
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_andes_ae350_riscv32_imsic
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_andes_ae350_riscv32_imsic_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv32_imsic
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_andes_ae350_riscv32_imsic
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_andes_ae350_riscv32_imsic_linux
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_andes_ae350_riscv32_imsic_linux_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv32_imsic_linux
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_andes_ae350_riscv32_imsic_linux
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_andes_ae350_riscv64
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_andes_ae350_riscv64_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv64
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_andes_ae350_riscv64
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_andes_ae350_riscv64_imsic
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_andes_ae350_riscv64_imsic_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv64_imsic
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_andes_ae350_riscv64_imsic
-          path: buildroot/output/images
-
-      - name: Build mbedtee_qemu_andes_ae350_riscv64_imsic_linux
-        run: |
-          cd buildroot && make clean && make mbedtee_qemu_andes_ae350_riscv64_imsic_linux_defconfig && make
-      - name: Upload Artifact - mbedtee_qemu_andes_ae350_riscv64_imsic_linux
-        uses: actions/upload-artifact@v4
-        with:
-          name: mbedtee_qemu_andes_ae350_riscv64_imsic_linux
-          path: buildroot/output/images

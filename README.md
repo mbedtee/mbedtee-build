@@ -177,23 +177,23 @@ kapa@ubuntu24:~/mbedtee-build/buildroot$ tree configs/ | grep mbedtee_qemu
 Enter the **mbedtee-build** folder, clone the QEMU repository to '**mbedtee-build/qemu**'.
 
 ```
-git clone https://gitlab.com/qemu-project/qemu.git
-cd qemu && git checkout stable-9.0
-./configure --prefix=$(pwd)/build --enable-slirp --target-list=mips64el-softmmu,mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu
-make -j4 && make install
+git clone https://gitlab.com/qemu-project/qemu.git && cd qemu
+if [ ! -z `cat /etc/os-release | grep VERSION_ID | grep 20` ]; then git checkout stable-9.0; else git checkout stable-11.0; fi
+./configure --prefix=$(pwd)/build --enable-slirp --target-list=mipsel-softmmu,aarch64-softmmu,arm-softmmu,riscv32-softmmu,riscv64-softmmu
+make -j8 && make install
 ```
 
 > [!WARNING]
 >
-> ubuntu20 must use the **stable-9.0** or older version, ubuntu22/24 can use the 9.1 or newer version.
+> ubuntu20 must use the **stable-9.0** or older version, ubuntu22/24/26 can use the **stable-11.0** or newer version.
 
 For **Andes AE350** platforms, clone the Andes QEMU fork to '**mbedtee-build/andes-qemu**':
 
 ```
-git clone https://github.com/andestech/qemu.git andes-qemu
-cd andes-qemu && git checkout ast-v5_4_1-release
+git clone https://github.com/andestech/qemu.git andes-qemu && cd andes-qemu
+git checkout ast-v5_4_1-release
 ./configure --prefix=$(pwd)/build --target-list=riscv32-softmmu,riscv64-softmmu
-make -j4 && make install
+make -j8 && make install
 ```
 
 ## Run the targets @ QEMU

@@ -199,7 +199,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv32_qemu_virt_linux_config"
@@ -319,7 +319,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv64_qemu_virt_linux_config"
@@ -371,7 +371,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_ast2600_linux_config"
@@ -420,7 +420,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_ast2700_linux_config"
@@ -467,7 +467,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_imx7d_linux_config"
@@ -618,7 +618,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_raspi4b_linux_config"
@@ -736,7 +736,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_virt_linux_config"
@@ -783,7 +783,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_ROOTFS_POST_IMAGE_SCRIPT="tee/linux/post-image.sh"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_virt_linux_emmc_config"
@@ -830,7 +830,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_virt_linux_config"
@@ -881,7 +881,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_ROOTFS_POST_IMAGE_SCRIPT="tee/linux/post-image.sh"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_virt_linux_emmc_config"
@@ -965,7 +965,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv32_qemu_virt_linux_config"
@@ -1084,7 +1084,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv64_qemu_virt_linux_config"
@@ -1168,7 +1168,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv64_qemu_virt_linux_config"
@@ -1219,7 +1219,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_xlnx_versal_virt_linux_config"
@@ -1265,7 +1265,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_xlnx_zcu102_linux_config"
@@ -1347,7 +1347,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_vexpress_ca15_linux_config"
@@ -1397,7 +1397,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_vexpress_ca15_linux_config"
@@ -1446,7 +1446,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1491,7 +1491,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1540,7 +1540,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_vexpress_ca5_linux_config"
@@ -1589,7 +1589,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1635,7 +1635,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1681,7 +1681,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.1"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.1.2"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -10390,13 +10390,13 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +-- 
 +2.43.0
 +
-diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.1.1.patch buildroot/tee/linux/linux-patches/mbedtee-linux-7.1.1.patch
---- buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.1.1.patch
-+++ buildroot/tee/linux/linux-patches/mbedtee-linux-7.1.1.patch
+diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.1.2.patch buildroot/tee/linux/linux-patches/mbedtee-linux-7.1.2.patch
+--- buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.1.2.patch
++++ buildroot/tee/linux/linux-patches/mbedtee-linux-7.1.2.patch
 @@ -0,0 +1,3514 @@
-+From f1065d29a1200068b072c36987bbe7ded704c3b5 Mon Sep 17 00:00:00 2001
++From 937ceba5f76ecad45e746381e99f2dec694a1e24 Mon Sep 17 00:00:00 2001
 +From: Xing Loong <xing.xl.loong@gmail.com>
-+Date: Mon, 29 Jun 2026 21:25:55 +0800
++Date: Tue, 30 Jun 2026 21:38:46 +0800
 +Subject: [PATCH] tee: add MbedTEE Trusted Execution Environment driver
 +
 +MbedTEE is a Trusted Execution Environment for embedded systems
