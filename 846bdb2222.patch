@@ -199,7 +199,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv32_qemu_virt_linux_config"
@@ -319,7 +319,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv64_qemu_virt_linux_config"
@@ -371,7 +371,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_ast2600_linux_config"
@@ -420,7 +420,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_ast2700_linux_config"
@@ -467,7 +467,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_imx7d_linux_config"
@@ -618,7 +618,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_raspi4b_linux_config"
@@ -736,7 +736,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_virt_linux_config"
@@ -783,7 +783,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_ROOTFS_POST_IMAGE_SCRIPT="tee/linux/post-image.sh"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_virt_linux_emmc_config"
@@ -830,7 +830,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_virt_linux_config"
@@ -881,7 +881,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_ROOTFS_POST_IMAGE_SCRIPT="tee/linux/post-image.sh"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_qemu_virt_linux_emmc_config"
@@ -965,7 +965,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv32_qemu_virt_linux_config"
@@ -1084,7 +1084,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv64_qemu_virt_linux_config"
@@ -1168,7 +1168,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# BR2_ENABLE_LOCALE_PURGE is not set
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/riscv64_qemu_virt_linux_config"
@@ -1219,7 +1219,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_xlnx_versal_virt_linux_config"
@@ -1265,7 +1265,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_qemu_xlnx_zcu102_linux_config"
@@ -1347,7 +1347,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_vexpress_ca15_linux_config"
@@ -1397,7 +1397,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_vexpress_ca15_linux_config"
@@ -1446,7 +1446,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1491,7 +1491,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1540,7 +1540,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv7a_vexpress_ca5_linux_config"
@@ -1589,7 +1589,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1635,7 +1635,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -1681,7 +1681,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +BR2_SYSTEM_DEFAULT_PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 +BR2_LINUX_KERNEL=y
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y
-+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.4"
++BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="7.2.9"
 +BR2_LINUX_KERNEL_PATCH="tee/linux/linux-patches/mbedtee-linux-$(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE).patch"
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="tee/linux/linux-configs/armv8a_vexpress_linux_config"
@@ -14805,13 +14805,13 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +-- 
 +2.43.0
 +
-diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.2.4.patch buildroot/tee/linux/linux-patches/mbedtee-linux-7.2.4.patch
---- buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.2.4.patch
-+++ buildroot/tee/linux/linux-patches/mbedtee-linux-7.2.4.patch
+diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.2.9.patch buildroot/tee/linux/linux-patches/mbedtee-linux-7.2.9.patch
+--- buildroot-ori/tee/linux/linux-patches/mbedtee-linux-7.2.9.patch
++++ buildroot/tee/linux/linux-patches/mbedtee-linux-7.2.9.patch
 @@ -0,0 +1,3728 @@
-+From 76134e5fcebef1e385ee4bb3c823d5e778504e47 Mon Sep 17 00:00:00 2001
++From f47d68b80b5afe9d47df21a4d36760b77a640fc8 Mon Sep 17 00:00:00 2001
 +From: Xing Loong <xing.xl.loong@gmail.com>
-+Date: Fri, 11 Sep 2026 11:00:08 +0800
++Date: Wed, 7 Oct 2026 19:43:54 +0800
 +Subject: [PATCH] tee: add MbedTEE driver
 +
 +This patch adds a Linux TEE driver that communicates with
@@ -15164,7 +15164,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 ++- [2] ARM SMC Calling Convention: https://developer.arm.com/architectures/system-architectures/software-standards/smccc
 ++- [3] RISC-V IMSIC specification: https://github.com/riscv/riscv-aia
 +diff --git a/MAINTAINERS b/MAINTAINERS
-+index 8014b9f..c2d3135 100644
++index 95cd976..0760b33 100644
 +--- a/MAINTAINERS
 ++++ b/MAINTAINERS
 +@@ -16098,6 +16098,15 @@ F:	Documentation/devicetree/bindings/net/dsa/maxlinear,mxl862xx.yaml
@@ -19342,7 +19342,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +4# Locally calculated
 +sha256 f11a2188717bb3934a4f4d1dfb1bac5d763be4cf59baf2e102e1add077750aa2 aarch64-mbedtee-elf-15.2.0.tar.bz2
 +sha256 0126fea28970582fa0bda04c9d817e4774c9414251b2819ea92ca9160bcbe63a aarch64-mbedtee-elf-16.1.0.tar.bz2
-+sha256 1bbd80700e19c6585aeeaa42111b6975c880f967805ee7320485af1459b01297 aarch64-mbedtee-elf-16.2.0.tar.bz2
++sha256 766a32ee41d3f3243bc51d16fd5aa234de067637e5a5fa320ceee5d9cc5e4829 aarch64-mbedtee-elf-16.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk
 +++ buildroot/toolchain/toolchain-mbedtee-aarch64/toolchain-mbedtee-aarch64.mk
@@ -19393,7 +19393,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# Locally calculated
 +sha256 9ddccd0720d478ac1eeb89a2e73cff887e5f67c47fa455fd61025526cdd7298b arm-mbedtee-eabi-15.2.0.tar.bz2
 +sha256 bed7277131c299943cfd16ece5939107f0560fff0075c93e20bd61e477ac687b arm-mbedtee-eabi-16.1.0.tar.bz2
-+sha256 214529a3fe00ea254bd9942c2a98e9c0cd7c11ad2f334d1149bd1ce11647f97d arm-mbedtee-eabi-16.2.0.tar.bz2
++sha256 78814643b9eafca339173c49ecc42ebcc3c1588e2dd33b68cf1b3bcaea5da81f arm-mbedtee-eabi-16.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk
 +++ buildroot/toolchain/toolchain-mbedtee-arm/toolchain-mbedtee-arm.mk
@@ -19443,7 +19443,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# Locally calculated
 +sha256 6747bd834e8ef5d235b9b2e80cd0997d8f8c0ba8d6f04b41868e0736e073946b mips-mbedtee-elf-15.2.0.tar.bz2
 +sha256 57918c433a610583f6d9cda3f8ed30d67002c0e78d710166ac9ab5bcf6b202e7 mips-mbedtee-elf-16.1.0.tar.bz2
-+sha256 7df8efd98faa8fda463d1cd23bce15bb74156e678904a198c9cf1fe2deedd09f mips-mbedtee-elf-16.2.0.tar.bz2
++sha256 9e267fcc94150ceca497e93c64edebb55937e126acbd6f4616c035635d631e43 mips-mbedtee-elf-16.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk
 +++ buildroot/toolchain/toolchain-mbedtee-mips/toolchain-mbedtee-mips.mk
@@ -19493,7 +19493,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# Locally calculated
 +sha256 44913771c63e4ea17ef6733f30428f69dd6e36c693812f03dabf62cb74c0c09e riscv32-mbedtee-elf-15.2.0.tar.bz2
 +sha256 e84ca80ee13fd95e7f9dd07c96ea0c139708303eae1a7a951e1ba961216f4ef5 riscv32-mbedtee-elf-16.1.0.tar.bz2
-+sha256 3d62f7e5dbb410d0afd5b9b3216818864bfff6beac7e5b449ae2d3144351b399 riscv32-mbedtee-elf-16.2.0.tar.bz2
++sha256 ddd6abc7034ca08f8c09736b8c1892b4d2b177a29ee8effc4552a65ba8fcebd6 riscv32-mbedtee-elf-16.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk
 +++ buildroot/toolchain/toolchain-mbedtee-riscv32/toolchain-mbedtee-riscv32.mk
@@ -19543,7 +19543,7 @@ diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk'
 +# Locally calculated
 +sha256 6f2a491bfb289da104d4612c74cf38bcfea458b6452d875aea2508a76445880d riscv64-mbedtee-elf-15.2.0.tar.bz2
 +sha256 6aba0f3dee577a36339aa42746e14754d7610bb7dfdd55983ccb48e1adaa22ff riscv64-mbedtee-elf-16.1.0.tar.bz2
-+sha256 f5059b79c1e0a50a60173735e2390cef142fc1cd6755798c0f5b887c047aff9f riscv64-mbedtee-elf-16.2.0.tar.bz2
++sha256 b6ec2ad7e91e9267a2ec1c10e5c4ebbe0cd3c5bfa295517e7a483830834dc743 riscv64-mbedtee-elf-16.2.0.tar.bz2
 diff -uprN '--exclude=.*' '--exclude=output' '--exclude=dl' '--exclude=local.mk' buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk
 --- buildroot-ori/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk
 +++ buildroot/toolchain/toolchain-mbedtee-riscv64/toolchain-mbedtee-riscv64.mk
